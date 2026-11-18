@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>New Hi Tech Computer Institute | Typing Practice</title>
+<style>
+:root{--blue:#155eef;--navy:#14213d;--ink:#182230;--muted:#667085;--line:#e4e7ec;--bg:#f4f7fb;--green:#039855;--red:#d92d20}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Arial,"Noto Sans Devanagari",sans-serif;color:var(--ink)}
+.wrap{max-width:1120px;margin:24px auto;padding:0 16px}.brand{background:linear-gradient(120deg,#102a56,#1769c2);color:white;border-radius:18px;padding:22px 24px;box-shadow:0 8px 24px #17365d20}
+.brand h1{font-size:clamp(21px,3vw,30px);margin:0 0 6px}.brand p{margin:0;color:#dceaff}
+.panel{background:white;border:1px solid var(--line);border-radius:16px;padding:20px;margin-top:18px;box-shadow:0 4px 18px #10182808}
+h2{font-size:19px;margin:0 0 14px}.modes{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.mode{border:1px solid #cfd8e5;border-radius:12px;padding:14px 10px;background:#fff;cursor:pointer;text-align:center;font-weight:700;color:var(--navy);font-size:15px}
+.mode small{display:block;color:var(--muted);font-weight:400;margin-top:5px}.mode.active{background:#eaf2ff;border:2px solid var(--blue);color:#1249ad}
+.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:end}.field{display:flex;flex-direction:column;gap:6px;min-width:145px;flex:1}
+label{font-size:13px;color:#475467;font-weight:700}select{height:42px;border:1px solid #cfd4dc;border-radius:9px;padding:0 10px;background:white;font-size:14px}
+.switchline{display:flex;align-items:center;gap:9px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;min-height:42px}
+button{border:0;border-radius:10px;padding:12px 18px;background:var(--blue);color:white;font-weight:700;cursor:pointer;font-size:14px}
+button.secondary{background:#eef2f6;color:#344054}button:disabled{opacity:.45;cursor:not-allowed}
+.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:16px}
+.stat{border:1px solid var(--line);border-radius:12px;padding:12px;background:#fbfcfe}.stat span{display:block;color:var(--muted);font-size:12px}.stat strong{display:block;font-size:23px;margin-top:5px;color:var(--navy);font-variant-numeric:tabular-nums}
+.progress{height:8px;background:#edf1f6;border-radius:20px;overflow:hidden;margin:14px 0}.progress>div{height:100%;width:0;background:var(--blue);transition:width .15s}
+.passage{font-size:19px;line-height:1.9;letter-spacing:.1px;background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:16px;min-height:105px;white-space:pre-wrap;word-break:break-word}
+.passage .done{color:#039855}.passage .bad{background:#fee4e2;color:#b42318;border-radius:3px}.passage .next{border-bottom:2px solid var(--blue)}
+textarea{width:100%;min-height:135px;resize:vertical;border:2px solid #cfd8e5;border-radius:12px;padding:14px;font:19px/1.8 Arial,"Noto Sans Devanagari",sans-serif;outline:none}
+textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #155eef18}textarea:disabled{background:#f2f4f7}
+.note{font-size:13px;line-height:1.6;color:#667085;margin:10px 0 0}.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px;align-items:center}.status{margin-left:auto;font-size:13px;color:var(--muted)}
+.result{display:none;border:1px solid #abefc6;background:#ecfdf3;border-radius:12px;padding:16px;margin-top:15px}.result h3{margin:0 0 10px;color:#067647}.result p{margin:5px 0}
+.footer{text-align:center;color:#98a2b3;font-size:12px;padding:18px}
+@media(max-width:760px){.modes{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(3,1fr)}.panel{padding:15px}.stat strong{font-size:20px}}
+@media(max-width:420px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="brand">
+<h1>NEW HI TECH COMPUTER INSTITUTE</h1>
+<p>Typing Practice Zone · Learn · Practice · Grow</p>
+</header>
+
+<section class="panel">
+<h2>अपनी टाइपिंग चुनें</h2>
+<div class="modes">
+<button class="mode active" data-mode="english">English<small>QWERTY Typing</small></button>
+<button class="mode" data-mode="mangal">हिन्दी मंगल<small>Unicode · Inscript</small></button>
+<button class="mode" data-mode="krutidev">कृति देव<small>Kruti Dev 010</small></button>
+<button class="mode" data-mode="inscript">हिन्दी Inscript<small>Keyboard layout</small></button>
+</div>
+<p class="note" id="modeNote">English typing practice. वाक्य देखकर नीचे टाइप करना शुरू करें।</p>
+</section>
+
+<section class="panel">
+<h2>अभ्यास सेटिंग</h2>
+<div class="controls">
+<div class="field"><label for="duration">समय चुनें</label><select id="duration"><option value="1">1 मिनट</option><option value="2">2 मिनट</option><option value="5" selected>5 मिनट</option><option value="10">10 मिनट</option></select></div>
+<div class="field"><label for="level">कठिनाई</label><select id="level"><option value="easy">आसान</option><option value="medium" selected>मध्यम</option><option value="hard">कठिन</option></select></div>
+<div class="field"><label for="passageSelect">अभ्यास पाठ</label><select id="passageSelect"><option value="0">पाठ 1</option><option value="1">पाठ 2</option><option value="2">पाठ 3</option></select></div>
+<div class="switchline"><input type="checkbox" id="backspace" checked><label for="backspace">Backspace ON</label></div>
+</div>
+</section>
+
+<section class="panel">
+<h2>लाइव टाइपिंग टेस्ट</h2>
+<div class="stats">
+<div class="stat"><span>बाकी समय</span><strong id="time">05:00</strong></div>
+<div class="stat"><span>Speed (WPM)</span><strong id="wpm">0</strong></div>
+<div class="stat"><span>Accuracy</span><strong id="accuracy">100%</strong></div>
+<div class="stat"><span>गलतियाँ</span><strong id="errors">0</strong></div>
+<div class="stat"><span>सही अक्षर</span><strong id="correct">0</strong></div>
+<div class="stat"><span>CPM</span><strong id="cpm">0</strong></div>
+</div>
+<div class="progress"><div id="progress"></div></div>
+<label>इस पाठ को देखकर टाइप करें</label>
+<div class="passage" id="passage" aria-live="polite"></div>
+<label for="typing" style="display:block;margin:14px 0 7px">यहाँ टाइप करें</label>
+<textarea id="typing" placeholder="ऊपर 'English' या हिन्दी मोड चुनें, फिर यहाँ टाइप करें…" disabled spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+<div class="actions">
+<button id="start">अभ्यास शुरू करें</button>
+<button id="restart" class="secondary">फिर से शुरू करें</button>
+<button id="next" class="secondary">अगला पाठ</button>
+<span class="status" id="status">शुरू करने के लिए बटन दबाएँ</span>
+</div>
+<div class="result" id="result">
+<h3>आपका परिणाम</h3>
+<p id="resultLine"></p>
+<p id="resultAdvice"></p>
+</div>
+<p class="note" id="keyboardNote">नोट: हिन्दी मंगल/Inscript के लिए Windows में Hindi–Inscript keyboard जोड़ें (Settings → Time & language → Language & region → Hindi → Language options → Keyboards). कीबोर्ड बदलने के लिए Win + Space दबाएँ।</p>
+</section>
+<div class="footer">New Hi Tech Computer Institute · Typing Practice</div>
+</div>
+<script>
+(()=>{
+const passages={
+english:[
+"Computer skills help us learn, work, communicate, and solve problems in the digital world. Regular practice improves typing speed and accuracy.",
+"Good typing is an important computer skill. Keep your fingers on the home row, look at the screen, and practise every day with patience.",
+"Technology makes our work faster and easier. A skilled computer user can prepare documents, manage data, use the internet, and communicate safely."
+],
+hindi:[
+"कंप्यूटर आज शिक्षा, कार्यालय और व्यवसाय का महत्वपूर्ण साधन है। नियमित अभ्यास से टाइपिंग की गति और शुद्धता दोनों बेहतर होती हैं।",
+"हमें कंप्यूटर का उपयोग सावधानी और समझदारी से करना चाहिए। सही जानकारी, निरंतर अभ्यास और मेहनत से डिजिटल कौशल विकसित होते हैं।",
+"हिंदी टाइपिंग सीखने के लिए पहले अक्षरों की पहचान करें। धीरे-धीरे अभ्यास करें और गलतियों को सुधारते हुए अपनी गति बढ़ाएँ।"
+],
+hard:[
+"Accuracy is more important than speed in the beginning. Practise punctuation, numbers (12345), capital letters, and complete sentences without looking at the keyboard.",
+"डिजिटल तकनीक ने सीखने और काम करने के तरीके बदल दिए हैं। सुरक्षित पासवर्ड, सही जानकारी और नियमित अभ्यास अच्छे कंप्यूटर उपयोगकर्ता की पहचान हैं।"
+]};
+let mode='english',active=false,started=false,remaining=300,timer=null,startAt=0,passageNo=0;
+const $=id=>document.getElementById(id);
+const input=$('typing'),duration=$('duration'),passage=$('passage');
+const getText=()=>{
+ let level=$('level').value;
+ let arr=(mode==='english'?passages.english:(level==='hard'?passages.hard:passages.hindi));
+ return arr[passageNo%arr.length];
+};
+function renderPassage(){
+ const target=getText(),typed=input.value;
+ let out='';
+ for(let i=0;i<target.length;i++){
+  let cls=i<typed.length?(typed[i]===target[i]?'done':'bad'):(i===typed.length?'next':'');
+  out+=`<span class="${cls}">${escapeHtml(target[i])}</span>`;
+ }
+ passage.innerHTML=out;
+ $('progress').style.width=Math.min(100,typed.length/target.length*100)+'%';
+}
+function escapeHtml(s){return s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#39;");}
+function stats(){
+ const typed=input.value,target=getText();let correct=0,errors=0;
+ for(let i=0;i<typed.length;i++){if(typed[i]===target[i])correct++;else errors++;}
+ const elapsed=started?Math.max(1,(Date.now()-startAt)/60000):0;
+ const minutes=Math.max(elapsed,1/60);
+ const wpm=Math.round((correct/5)/minutes);
+ const cpm=Math.round(correct/minutes);
+ const accuracy=typed.length?Math.round(correct/typed.length*100):100;
+ $('wpm').textContent=wpm;$('cpm').textContent=cpm;$('accuracy').textContent=accuracy+'%';
+ $('errors').textContent=errors;$('correct').textContent=correct;
+}
+function clock(){let m=Math.floor(remaining/60),s=remaining%60;$('time').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');}
+function begin(){
+ clearInterval(timer);remaining=Number(duration.value)*60;clock();input.value='';started=false;active=true;
+ input.disabled=false;$('result').style.display='none';$('status').textContent='टाइप करना शुरू करें';renderPassage();stats();input.focus();
+}
+function startClock(){
+ if(started||!active)return;started=true;startAt=Date.now();$('status').textContent='टेस्ट चल रहा है';
+ timer=setInterval(()=>{remaining--;clock();stats();if(remaining<=0)finish();},1000);
+}
+function finish(){
+ clearInterval(timer);active=false;input.disabled=true;
+ const target=getText(),typed=input.value;let correct=0,errors=0;
+ for(let i=0;i<typed.length;i++){if(typed[i]===target[i])correct++;else errors++;}
+ const mins=Math.max((Number(duration.value)*60-remaining)/60,1/60);
+ const accuracy=typed.length?Math.round(correct/typed.length*100):0;
+ const wpm=Math.round((correct/5)/mins);
+ $('resultLine').textContent=`Speed: ${wpm} WPM · Accuracy: ${accuracy}% · सही अक्षर: ${correct} · गलतियाँ: ${errors}`;
+ $('resultAdvice').textContent=accuracy>=95?'बहुत अच्छा! इसी तरह अभ्यास जारी रखें।': 'पहले शुद्धता पर ध्यान दें, फिर धीरे-धीरे गति बढ़ाएँ।';
+ $('result').style.display='block';$('status').textContent='टेस्ट पूरा हुआ';stats();
+}
+function chooseMode(m){
+ mode=m;document.querySelectorAll('.mode').forEach(b=>b.classList.toggle('active',b.dataset.mode===m));
+ const notes={
+ english:'English typing practice. वाक्य देखकर नीचे टाइप करना शुरू करें।',
+ mangal:'मंगल (Unicode) मोड: Windows Hindi Inscript keyboard से हिन्दी टाइप करें। पाठ Unicode हिन्दी में है।',
+ inscript:'Inscript मोड: Windows में Hindi–Inscript keyboard चुनें (Win + Space), फिर नीचे टाइप करें।',
+ krutidev:'Kruti Dev मोड: इस कंप्यूटर में Kruti Dev 010 font और Kruti Dev keyboard layout इंस्टॉल होना चाहिए। इस पेज में legacy font file शामिल नहीं है; अभी मेट्रिक्स keystrokes पर आधारित होंगे।'
+ };
+ $('modeNote').textContent=notes[m];
+ if(m==='english')$('keyboardNote').textContent='English के लिए सामान्य ENG keyboard layout चुनें।';
+ else $('keyboardNote').textContent='हिन्दी मंगल/Inscript के लिए Windows में Hindi–Inscript keyboard जोड़ें और Win + Space से चुनें। Kruti Dev के लिए Kruti Dev 010 font तथा उसका keyboard layout अलग से इंस्टॉल होना चाहिए।';
+ passageNo=0;begin();
+}
+document.querySelectorAll('.mode').forEach(b=>b.addEventListener('click',()=>chooseMode(b.dataset.mode)));
+$('start').addEventListener('click',()=>{begin();});
+$('restart').addEventListener('click',begin);
+$('next').addEventListener('click',()=>{passageNo++;begin();});
+duration.addEventListener('change',()=>{remaining=Number(duration.value)*60;clock();});
+$('backspace').addEventListener('change',e=>{input.dataset.backspace=e.target.checked?'on':'off';});
+input.addEventListener('keydown',e=>{
+ if(e.key==='Backspace'&&!$('backspace').checked){e.preventDefault();return;}
+ if(!active)return;
+ startClock();
+});
+input.addEventListener('input',()=>{if(!active)return;startClock();renderPassage();stats();if(input.value.length>=getText().length)finish();});
+$('level').addEventListener('change',()=>{passageNo=0;begin();});
+$('passageSelect').addEventListener('change',e=>{passageNo=Number(e.target.value);begin();});
+clock();renderPassage();$('backspace').dispatchEvent(new Event('change'));
+})();
+</script>
+</body>
+</html>
