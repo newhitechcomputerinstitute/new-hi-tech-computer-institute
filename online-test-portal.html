@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#142b59">
+<title>Online Test Portal | New Hi Tech Computer Institute</title>
+<style>
+:root{--navy:#142b59;--blue:#2563eb;--purple:#7c3aed;--teal:#0f9f91;--pink:#db2777;--orange:#ea580c;--ink:#17233b;--muted:#65718a;--bg:#f4f7ff}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(120deg,#142b59,#315bd8 60%,#7c3aed);color:white;padding:26px 16px 34px}
+.top{max-width:1120px;margin:auto}.back{display:inline-block;color:#fff;text-decoration:none;border:1px solid #ffffff70;border-radius:999px;padding:8px 14px;font-size:14px}
+h1{font-size:clamp(27px,5vw,42px);margin:18px 0 8px}.sub{opacity:.92;max-width:760px;line-height:1.7;margin:0}
+main{max-width:1120px;margin:24px auto;padding:0 15px 50px}.section-title{font-size:22px;margin:24px 0 14px}.group-label{font-weight:800;color:#43516d;margin:22px 0 12px}
+.course-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.course{border:0;text-align:left;padding:18px;border-radius:18px;color:white;cursor:pointer;min-height:128px;box-shadow:0 8px 22px #162a5018;transition:.18s}
+.course:hover{transform:translateY(-3px);filter:saturate(1.12)}.course .emoji{font-size:28px;display:block;margin-bottom:8px}.course b{display:block;font-size:17px}.course small{display:block;margin-top:6px;opacity:.9}
+.c1{background:linear-gradient(135deg,#2563eb,#06b6d4)}.c2{background:linear-gradient(135deg,#7c3aed,#c026d3)}.c3{background:linear-gradient(135deg,#0f766e,#22c55e)}.c4{background:linear-gradient(135deg,#c2410c,#f59e0b)}.c5{background:linear-gradient(135deg,#be185d,#f472b6)}.c6{background:linear-gradient(135deg,#334155,#64748b)}
+.panel{display:none;background:white;border-radius:20px;padding:20px;margin-top:22px;box-shadow:0 8px 28px #142b5912}.panel.active{display:block}.panel-head{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}.panel h2{margin:0;font-size:22px}.back-course{border:0;background:#eef2ff;color:#273e80;padding:9px 13px;border-radius:10px;font-weight:700;cursor:pointer}
+.series-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:10px;margin-top:18px}
+.series{border:1px solid #dce4f3;background:#f9fbff;padding:14px 10px;border-radius:13px;text-align:center;cursor:pointer;color:#253451;font-weight:800}
+.series.ready{background:linear-gradient(135deg,#e0f2fe,#ede9fe);border-color:#9bb9fa;color:#2447a4}.series:disabled{cursor:not-allowed;opacity:.58}.series small{display:block;font-size:11px;font-weight:600;margin-top:5px;color:#68758c}
+.note{background:#fff7df;border:1px solid #f5d98b;padding:13px 15px;border-radius:12px;color:#704b08;line-height:1.65;margin:16px 0}
+.question{border:1px solid #e2e8f0;border-radius:15px;padding:17px;margin:14px 0}.question h3{font-size:17px;line-height:1.55;margin:0 0 12px}.option{display:flex;gap:10px;align-items:flex-start;padding:10px;border:1px solid #e3e9f3;border-radius:10px;margin:8px 0;cursor:pointer}.option input{margin-top:4px}.primary{border:0;background:linear-gradient(120deg,#2563eb,#7c3aed);color:#fff;border-radius:11px;padding:12px 18px;font-weight:800;cursor:pointer}.secondary{border:0;background:#eef2ff;color:#253f8b;border-radius:11px;padding:11px 15px;font-weight:800;cursor:pointer}.result{background:#ecfdf5;border:1px solid #a7f3d0;padding:17px;border-radius:14px;margin-top:15px}
+#testArea{display:none}#testArea.active{display:block}.toolbar{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;margin:15px 0}
+footer{text-align:center;color:#66738b;font-size:13px;padding:20px}
+@media(max-width:560px){header{padding-top:18px}.panel{padding:14px}.series-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<header><div class="top"><a class="back" href="index.html">← मुख्य वेबसाइट पर जाएँ</a><h1>📝 Online Test Portal</h1><p class="sub">अपना कोर्स चुनें, टेस्ट सीरीज़ 1 से 20 तक खोलें और अभ्यास करें। हर कोर्स के प्रश्न संस्थान द्वारा जोड़े जाएँगे।</p></div></header>
+<main>
+<section id="courseSection">
+<h2 class="section-title">अपना कोर्स चुनें</h2>
+<div class="group-label">🎓 O Level के लिए</div><div class="course-grid" id="olevelGrid"></div>
+<div class="group-label">💻 सभी कंप्यूटर कोर्स के लिए</div><div class="course-grid" id="allGrid"></div>
+</section>
+<section class="panel" id="seriesPanel">
+<div class="panel-head"><h2 id="courseTitle">कोर्स</h2><button class="back-course" id="backCourses">← सभी कोर्स</button></div>
+<p>अपनी पसंद की टेस्ट सीरीज़ चुनें। कुल 20 टेस्ट उपलब्ध स्लॉट हैं।</p>
+<div class="note">जिन टेस्ट सीरीज़ में प्रश्न अभी नहीं जोड़े गए हैं, वे बंद रहेंगी। प्रश्न जुड़ने के बाद वे अपने आप चालू हो जाएँगी।</div>
+<div class="series-grid" id="seriesGrid"></div>
+</section>
+<section class="panel" id="testArea">
+<div class="panel-head"><h2 id="testTitle">टेस्ट</h2><button class="back-course" id="backSeries">← टेस्ट सीरीज़</button></div>
+<div class="toolbar"><span id="questionCount"></span><span id="timer"></span></div>
+<div id="questions"></div>
+<button class="primary" id="submitTest">टेस्ट जमा करें</button>
+<div id="result"></div>
+</section>
+</main>
+<footer>New Hi Tech Computer Institute · विद्यार्थी अभ्यास पोर्टल</footer>
+<script src="test-questions.js"></script>
+<script>
+const COURSES = [["olevel-m1", "O Level – M1 IT Tools & Network Basics", "🎓", "O Level"], ["olevel-m2", "O Level – M2 Web Designing & Publishing", "🌐", "O Level"], ["olevel-m3", "O Level – M3 Python Programming", "🐍", "O Level"], ["olevel-m4", "O Level – M4 IoT", "🤖", "O Level"], ["ccc", "CCC", "📘", "सभी कंप्यूटर कोर्स"], ["basic-computer", "Basic Computer", "💻", "सभी कंप्यूटर कोर्स"], ["office", "MS Office / LibreOffice", "📊", "सभी कंप्यूटर कोर्स"], ["tally", "Tally & Accounting", "🧾", "सभी कंप्यूटर कोर्स"], ["typing", "Typing Practice", "⌨️", "सभी कंप्यूटर कोर्स"], ["internet-email", "Internet & Email", "📧", "सभी कंप्यूटर कोर्स"], ["web-design", "Web Designing (HTML/CSS)", "🎨", "सभी कंप्यूटर कोर्स"], ["javascript", "JavaScript", "⚡", "सभी कंप्यूटर कोर्स"], ["python", "Python Programming", "🐍", "सभी कंप्यूटर कोर्स"], ["dtp", "DTP & Graphic Design", "🖌️", "सभी कंप्यूटर कोर्स"]];
+const bank = window.TEST_QUESTION_BANK || {};
+let currentCourse = null, currentTest = null, timerHandle = null, remaining = 0;
+const $ = id => document.getElementById(id);
+const palette = ['c1','c2','c3','c4','c5','c6'];
+function renderCourses(){
+ const o=$('olevelGrid'), a=$('allGrid');
+ COURSES.forEach((c,i)=>{
+   const b=document.createElement('button'); b.className='course '+palette[i%palette.length];
+   b.innerHTML=`<span class="emoji">${c[2]}</span><b>${c[1]}</b><small>20 टेस्ट सीरीज़ · खोलने के लिए क्लिक करें</small>`;
+   b.addEventListener('click',()=>openCourse(c)); (c[3]==='O Level'?o:a).appendChild(b);
+ });
+}
+function openCourse(c){
+ currentCourse=c; $('courseTitle').textContent=c[1];
+ $('courseSection').style.display='none'; $('testArea').classList.remove('active'); $('seriesPanel').classList.add('active');
+ const grid=$('seriesGrid');grid.innerHTML='';
+ for(let i=1;i<=20;i++){
+  const key='test-'+i, qs=(bank[c[0]]&&bank[c[0]][key])||[];
+  const b=document.createElement('button');b.className='series'+(qs.length?' ready':'');b.disabled=!qs.length;
+  b.innerHTML=`टेस्ट सीरीज़ ${i}<small>${qs.length?qs.length+' प्रश्न उपलब्ध':'प्रश्न अभी नहीं जोड़े गए'}</small>`;
+  if(qs.length)b.addEventListener('click',()=>startTest(c,key,qs));
+  grid.appendChild(b);
+ }
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+function startTest(c,key,qs){
+ currentTest={key,qs}; $('seriesPanel').classList.remove('active');$('testArea').classList.add('active');
+ $('testTitle').textContent=c[1]+' · '+key.replace('test-','टेस्ट सीरीज़ ');
+ $('questionCount').textContent='कुल प्रश्न: '+qs.length;
+ $('result').innerHTML='';$('submitTest').style.display='inline-block';
+ $('questions').innerHTML=qs.map((q,i)=>`<div class="question"><h3>${i+1}. ${escapeHtml(q.question)}</h3>${q.options.map((op,j)=>`<label class="option"><input type="radio" name="q${i}" value="${j}"><span>${escapeHtml(op)}</span></label>`).join('')}</div>`).join('');
+ remaining=Math.max(1,Number(qs[0].timeLimit)||20)*60;updateTimer();
+ clearInterval(timerHandle);timerHandle=setInterval(()=>{remaining--;updateTimer();if(remaining<=0){clearInterval(timerHandle);submitTest();}},1000);
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+function updateTimer(){const m=Math.floor(remaining/60),s=remaining%60;$('timer').textContent=`⏱️ समय: ${m}:${String(s).padStart(2,'0')}`;}
+function submitTest(){
+ if(!currentTest||$('submitTest').style.display==='none')return;
+ clearInterval(timerHandle);let score=0,detail=[];
+ currentTest.qs.forEach((q,i)=>{const v=document.querySelector(`input[name="q${i}"]:checked`);const chosen=v?Number(v.value):-1;const ok=chosen===Number(q.answer);if(ok)score++;detail.push(`<p>${i+1}. ${ok?'✅ सही':'❌ गलत'} ${chosen<0?'(उत्तर नहीं दिया)':`· सही उत्तर: ${escapeHtml(q.options[Number(q.answer)])}`}</p>`);});
+ $('submitTest').style.display='none';
+ $('result').innerHTML=`<div class="result"><h3>आपका परिणाम: ${score} / ${currentTest.qs.length}</h3><b>${Math.round(score/currentTest.qs.length*100)}% अंक</b><hr>${detail.join('')}</div>`;
+}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
+$('backCourses').onclick=()=>{$('seriesPanel').classList.remove('active');$('courseSection').style.display='block';};
+$('backSeries').onclick=()=>{clearInterval(timerHandle);$('testArea').classList.remove('active');$('seriesPanel').classList.add('active');};
+$('submitTest').onclick=submitTest;
+renderCourses();
+</script>
+</body></html>
