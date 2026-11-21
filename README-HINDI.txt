@@ -27,3 +27,6 @@ Course keys: adca, dca, ccc, tally, bcc, olevel-m1, olevel-m2, olevel-m3, olevel
 सुरक्षा: GitHub Pages static hosting है। HTML/JS में ID-password रखने से विद्यार्थी उसे देख सकते हैं। कोई default admin password नहीं है। केवल GitHub repository write access वाले संस्थान के अधिकृत खाते से प्रश्न जोड़ें। विद्यार्थियों को Write access न दें। अलग secure admin login के लिए Firebase/Supabase जैसे backend और access rules configure करना आवश्यक है।
 
 अपलोड: ZIP extract करें और सभी फाइलें repository के root में upload करें। index.html को replace करें; बाकी पुरानी जरूरी फाइलें न हटाएँ। Commit changes करें। GitHub Pages पर live testing upload के बाद करें।
+
+
+अलग-अलग पेज अपडेट (नवंबर 2026): मुख्य वेबसाइट के Courses, Student Corner, Notice Board, Gallery, Contact/Admission और Practice नेविगेशन अब अलग HTML पेज खोलते हैं। पुराने #section लिंक हटा दिए गए हैं। नए पेज: courses.html, student-corner.html, notice-board.html, institute-gallery.html, contact-admission.html।
