@@ -33,7 +33,7 @@
 @media(max-width:540px){.course{padding:18px}.course h3{font-size:18px}.course-detail-btn{font-size:13px}.typing-options{grid-template-columns:1fr 1fr}}
 
 
-/* Student Notice and Practical Lab enhancements */
+/* Added Student Notice, Fee Information and Practical Lab sections only */
 .portal-toolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin:0 0 17px}
 .portal-filter{display:flex;gap:7px;flex-wrap:wrap}
 .portal-chip{border:1px solid #d7e4f5;background:#fff;color:#385474;padding:9px 13px;border-radius:30px;font:inherit;font-size:12px;font-weight:800;cursor:pointer}
@@ -49,6 +49,20 @@
 .notice-meta{border-top:1px solid #e8eef7;margin-top:14px;padding-top:10px;color:#8090a5;font-size:11px;font-weight:700}
 .noticeboard-footer{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-top:17px;padding:14px 16px;background:#eef6ff;border:1px solid #d8e9ff;border-radius:14px;color:#315477;font-size:13px;font-weight:700}
 .portal-action{display:inline-flex;align-items:center;justify-content:center;color:#145edb;font-weight:900;font-size:13px}
+.fee-alert{display:flex;gap:14px;align-items:center;background:linear-gradient(110deg,#102b55,#1766a9);color:#fff;padding:20px;border-radius:18px;margin-bottom:18px}
+.fee-alert-icon{width:48px;height:48px;flex:0 0 48px;border-radius:15px;background:#ffffff20;display:grid;place-items:center;font-size:27px;font-weight:900}
+.fee-alert b{font-size:17px}.fee-alert p{margin:5px 0 0;color:#d7e8ff;font-size:13px;line-height:1.6}
+.fee-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.fee-card{background:#fff;border:1px solid #dfe8f5;border-radius:17px;padding:18px;box-shadow:0 8px 22px #1b47800a;position:relative;overflow:hidden}
+.fee-card:after{content:"";position:absolute;width:90px;height:90px;border-radius:50%;right:-42px;top:-43px;background:#eaf2ff}
+.fee-icon{font-size:25px}.fee-card h3{color:#10264b;margin:9px 0 4px;font-size:17px}.fee-card p{color:#73839a;font-size:12px;margin:0 0 13px}
+.fee-value{display:block;font-size:19px;color:#145edb;margin-bottom:12px}
+.fee-card a{font-size:12px;font-weight:900;color:#0b8c70}
+.fee-details{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.fee-details>div{padding:14px;background:#f0f6ff;border:1px solid #e0eafa;border-radius:13px}
+.fee-details b,.fee-details span{display:block}.fee-details b{color:#18385f;font-size:13px}.fee-details span{color:#718198;font-size:11px;line-height:1.5;margin-top:5px}
+.fee-contact{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:17px;padding:16px 18px;background:#eafaf3;border:1px solid #cceedd;border-radius:15px;color:#145b43;font-weight:800;font-size:14px}
+.fee-contact .btn{background:#0b9b69;box-shadow:none}
 .lab-hero{display:flex;align-items:center;justify-content:space-between;gap:20px;background:radial-gradient(circle at 90% 15%,#2dd4bf44,transparent 27%),linear-gradient(120deg,#101f42,#174b85 65%,#087e9c);border-radius:22px;padding:25px 28px;color:#fff;margin-bottom:17px;overflow:hidden}
 .lab-kicker{font-size:10px;letter-spacing:1.7px;font-weight:900;color:#83eaff}.lab-hero h3{font-size:27px;margin:8px 0}.lab-hero p{color:#d5e9ff;line-height:1.6;font-size:13px;max-width:550px;margin:0}
 .lab-orbit{width:88px;height:88px;flex:0 0 88px;border:1px solid #ffffff60;border-radius:25px;display:grid;place-items:center;font-size:40px;color:#82edff;box-shadow:0 0 0 10px #ffffff0d,0 0 0 20px #ffffff08;transform:rotate(8deg)}
@@ -86,9 +100,11 @@
 .simulator-logo{width:44px;height:44px;flex:0 0 44px;border-radius:13px;background:#243e9b;color:#fff;display:grid;place-items:center;font-size:23px;font-weight:950}
 .simulator-logo.tink{background:#087eae}.simulator-card b,.simulator-card small,.simulator-card strong{display:block}.simulator-card b{color:#17375f;font-size:14px}.simulator-card small{color:#718198;font-size:11px;line-height:1.5;margin:4px 0}.simulator-card strong{color:#145edb;font-size:11px}
 .lab-bottom{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-top:15px;padding:15px 17px;border-radius:14px;background:#eafaf3;border:1px solid #d0efdf;color:#145b43;font-size:12px}.lab-bottom b{font-size:13px}
+@media(max-width:850px){.noticeboard-grid{grid-template-columns:repeat(2,1fr)}.fee-grid{grid-template-columns:repeat(2,1fr)}.lab-task-grid{grid-template-columns:repeat(2,1fr)}.iot-feature-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.noticeboard-grid,.fee-grid,.fee-details,.lab-task-grid,.python-roadmap,.iot-feature-grid,.simulator-links{grid-template-columns:1fr}.lab-tabs{grid-template-columns:repeat(2,1fr)}.lab-hero{padding:20px}.lab-orbit{width:65px;height:65px;flex-basis:65px;font-size:30px}.lab-panel{padding:14px}.fee-alert{align-items:flex-start}.noticeboard-footer{align-items:flex-start}.editor-toolbar span{margin-right:0}.preview-heading{align-items:flex-start;flex-direction:column}}
 
 
-/* Professional institute masthead and responsive navigation */
+/* Professional institute masthead and secure fee-admin additions */
 .site-header{background:#fff;position:relative;z-index:20;box-shadow:0 8px 24px rgba(16,38,75,.08)}
 .institute-masthead{display:flex;justify-content:center;align-items:center;padding:18px 16px 15px;background:linear-gradient(120deg,#10264b,#174b91 60%,#087eae);border-bottom:1px solid rgba(255,255,255,.16)}
 .masthead-brand{display:flex;align-items:center;justify-content:center;gap:15px;text-decoration:none;color:#fff;text-align:left}
@@ -100,87 +116,40 @@
 .site-header .navlinks a{padding:9px 11px;border-radius:9px;color:#17375f;font-size:12px;font-weight:800;text-decoration:none;transition:.2s}
 .site-header .navlinks a:hover{background:#eaf3ff;color:#145edb}
 .site-header .nav>.btn{white-space:nowrap}
+.admin-section{scroll-margin-top:25px}
+.admin-card{max-width:920px;margin:0 auto;background:#fff;border:1px solid #dce7f5;border-radius:20px;padding:22px;box-shadow:0 16px 42px rgba(20,50,100,.08)}
+.admin-security-note{padding:13px 15px;background:#eef6ff;border:1px solid #cfe3ff;border-radius:12px;color:#25466f;font-size:13px;line-height:1.65;margin-bottom:18px}
+.admin-form{max-width:430px;display:grid;gap:9px}
+.admin-form label,.admin-fee-item label{font-size:12px;font-weight:850;color:#284361}
+.admin-form input,.admin-fee-item input{width:100%;border:1px solid #d5e1ef;border-radius:10px;padding:12px;font:inherit;color:#1c2a3d;background:#fff;margin-bottom:7px}
+.admin-message{font-size:12px;color:#49627f;min-height:18px;margin:8px 0 0}
+.admin-editor-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:20px 0}
+.admin-editor-head b,.admin-editor-head small{display:block}.admin-editor-head b{font-size:18px;color:#16365d}.admin-editor-head small{font-size:12px;color:#64748b;margin-top:4px}
+.admin-fee-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.admin-fee-item{padding:15px;border:1px solid #e0e9f4;border-radius:14px;background:#f9fbff}
+.admin-fee-item h3{font-size:15px;color:#16365d;margin:0 0 12px}
+.admin-fee-item .toolbtn{width:100%;margin-top:5px}
+@media(max-width:650px){.institute-masthead{padding:15px 10px}.masthead-brand{gap:10px}.masthead-logo{width:46px;height:46px;border-radius:13px;font-size:19px}.masthead-name{font-size:clamp(17px,5vw,25px);letter-spacing:.015em}.masthead-name small{font-size:8px;letter-spacing:.2em}.site-header .nav{padding:8px 8px}.site-header .navlinks{gap:2px}.site-header .navlinks a{font-size:11px;padding:8px}.admin-card{padding:15px}.admin-fee-grid{grid-template-columns:1fr}.admin-editor-head{align-items:flex-start;flex-direction:column}}
 
-
-/* Mobile navigation enhancement — preserves the existing visual theme */
-.menu-toggle{display:none;align-items:center;justify-content:center;gap:5px;flex-direction:column;min-width:48px;min-height:44px;padding:8px 10px;border:1px solid #c8dcff;border-radius:12px;background:#fff;color:var(--navy);font:inherit;font-size:11px;font-weight:850;cursor:pointer;box-shadow:0 5px 14px rgba(20,50,100,.08)}
-.menu-toggle span{display:block;width:21px;height:2px;border-radius:2px;background:var(--blue);transition:transform .2s,opacity .2s}
-.menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(7px) rotate(45deg)}
-.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
-.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.menu-toggle b{font-size:10px;line-height:1;margin-top:2px}
-.navlinks a:focus-visible,.menu-toggle:focus-visible{outline:3px solid #0db8d8;outline-offset:3px}
-@media(max-width:850px){
-  .site-header .nav{position:relative;display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:nowrap}
-  .site-header .menu-toggle{display:flex;flex:0 0 auto}
-  .site-header .navlinks{display:none;position:absolute;top:calc(100% + 8px);left:12px;right:12px;z-index:60;flex-direction:column;align-items:stretch;gap:2px;padding:10px;background:#fff;border:1px solid #dce8f7;border-radius:16px;box-shadow:0 18px 40px rgba(16,38,75,.2);max-height:min(72vh,520px);overflow-y:auto}
-  .site-header .navlinks.open{display:flex}
-  .site-header .navlinks a{display:block;width:100%;padding:12px 14px;border-radius:10px;font-size:14px;line-height:1.35;color:var(--navy)}
-  .site-header .navlinks a:hover,.site-header .navlinks a:focus-visible{background:#eef6ff;color:var(--blue)}
-  .site-header .nav>.btn{padding:11px 13px;white-space:nowrap}
-}
-@media(max-width:380px){
-  .site-header .nav{padding-left:8px;padding-right:8px;gap:7px}
-  .site-header .nav>.btn{font-size:12px;padding:10px 9px}
-}
-
-/* Dedicated O Level Practice Lab launch buttons */
-.olevel-launch{display:inline-flex;align-items:center;gap:12px;margin-top:16px;padding:15px 22px;border-radius:15px;color:#fff!important;font-weight:950;letter-spacing:.2px;background:linear-gradient(110deg,#7c3aed,#2563eb 48%,#06b6d4);box-shadow:0 12px 28px #2563eb42;border:1px solid #ffffff55;transition:transform .2s,box-shadow .2s}
-.olevel-launch:hover{transform:translateY(-3px);box-shadow:0 17px 34px #2563eb55}
-.olevel-launch span{font-size:22px}
-.nav-olevel{background:linear-gradient(100deg,#7c3aed,#2563eb)!important;color:#fff!important;border-radius:10px;padding:9px 12px!important;box-shadow:0 6px 16px #2563eb35}
-@media(max-width:850px){.olevel-launch{width:100%;justify-content:center}.nav-olevel{display:block!important}}
-\n
-/* Colorful, professional quick-access buttons */
-.quick-access{padding-top:32px;padding-bottom:24px}.quick-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.quick-card{min-height:132px;border-radius:19px;padding:18px;color:#fff;display:flex;flex-direction:column;justify-content:center;gap:6px;box-shadow:0 12px 25px #17365d20;transition:transform .2s,box-shadow .2s;border:1px solid #ffffff55}.quick-card:hover{transform:translateY(-5px);box-shadow:0 18px 30px #17365d30}.quick-card span{font-size:27px}.quick-card b{font-size:16px}.quick-card small{font-size:12px;color:#ffffffdf}.q-course{background:linear-gradient(135deg,#1d4ed8,#06b6d4)}.q-typing{background:linear-gradient(135deg,#7c3aed,#c026d3)}.q-test{background:linear-gradient(135deg,#ea580c,#f59e0b)}.q-lab{background:linear-gradient(135deg,#047857,#10b981)}.q-student{background:linear-gradient(135deg,#1e40af,#6366f1)}.q-notice{background:linear-gradient(135deg,#be123c,#f43f5e)}.q-gallery{background:linear-gradient(135deg,#0e7490,#06b6d4)}.q-contact{background:linear-gradient(135deg,#334155,#64748b)}
-.big-course-toggle{display:inline-flex;align-items:center;gap:14px;margin-top:16px;padding:15px 24px;border:0;border-radius:15px;color:#fff;background:linear-gradient(110deg,#6d28d9,#2563eb,#0891b2);font:inherit;font-size:16px;font-weight:900;box-shadow:0 10px 24px #2563eb40;cursor:pointer;transition:.2s}.big-course-toggle:hover{transform:translateY(-3px);box-shadow:0 15px 28px #2563eb55}.big-course-toggle span{display:grid;place-items:center;width:27px;height:27px;border-radius:50%;background:#ffffff30;font-size:20px}.big-course-toggle[aria-expanded=true] span{transform:rotate(45deg)}
-@media(max-width:850px){.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.quick-grid{gap:10px}.quick-card{min-height:116px;padding:14px}.quick-card b{font-size:14px}.quick-card small{font-size:11px}.big-course-toggle{width:100%;justify-content:center}}
-
-</style>
-<style>
-.lab-launch-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:22px 0 10px}
-.lab-launch{display:flex;align-items:center;gap:17px;padding:24px;border-radius:20px;color:#fff!important;text-decoration:none;box-shadow:0 14px 32px #0f172a20;min-height:150px;transition:transform .2s,box-shadow .2s;border:1px solid #ffffff55}
-.lab-launch:hover{transform:translateY(-4px);box-shadow:0 20px 38px #0f172a30}
-.lab-launch.olevel{background:linear-gradient(120deg,#4338ca,#2563eb 55%,#0891b2)}
-.lab-launch.advanced{background:linear-gradient(120deg,#047857,#16a34a 52%,#f59e0b)}
-.launch-icon{font-size:42px;flex:0 0 52px;text-align:center}.lab-launch b{display:block;font-size:clamp(16px,2vw,21px);letter-spacing:.3px}.lab-launch small{display:block;color:#eff6ff;margin:7px 0 10px;line-height:1.5}.lab-launch em{font-style:normal;font-weight:900;background:#ffffff26;padding:7px 11px;border-radius:9px;display:inline-block}
-@media(max-width:650px){.lab-launch-grid{grid-template-columns:1fr}.lab-launch{padding:19px;min-height:130px}.launch-icon{font-size:35px;flex-basis:42px}}
-</style>
-</head>
+</style></head>
 <body>
 <div class="topline">Admissions & Course Information · <a href="tel:6394036352">Call: 6394036352</a> <a href="tel:7408479110">Call: 7408479110</a></div>
 <div class="ticker"><span>✨ New Hi Tech Computer Institute, Bahraich — Computer Education • Digital Skills • Typing • Tally • DCA • ADCA • CCC • Admission Open — संपर्क करें: 6394036352 ✨ &nbsp;&nbsp;&nbsp;&nbsp;</span></div>
 <header class="site-header">
   <div class="institute-masthead">
-    <a class="masthead-brand" href="index.html" aria-label="New Hi Tech Computer Institute home">
+    <a class="masthead-brand" href="#home" aria-label="New Hi Tech Computer Institute home">
       <span class="masthead-logo">NH</span>
       <span class="masthead-name">NEW HI TECH COMPUTER INSTITUTE<small>LEARN · PRACTICE · GROW</small></span>
     </a>
   </div>
   <nav class="nav" aria-label="मुख्य नेविगेशन">
-    <button class="menu-toggle" id="mobileMenuToggle" type="button" aria-label="मेन्यू खोलें" aria-controls="mainNavLinks" aria-expanded="false">
-      <span></span><span></span><span></span><b>Menu</b>
-    </button>
-    <div class="navlinks" id="mainNavLinks">
-      <a href="student-login.html">Student Login</a> <a href="advanced-learning.html">🚀 पढ़ाई और प्रैक्टिस</a><a href="courses.html">Courses</a><a href="student-corner.html">Student Corner</a><a href="notice-board.html">विद्यार्थी सूचना</a><a href="o-level-practice-lab.html">Practical Lab</a><a class="nav-olevel" href="o-level-practice-lab.html">🎓 O Level Lab</a><a href="online-test-portal.html">Online Test</a><a href="advanced-learning.html">Practice</a><a href="institute-gallery.html">Gallery</a><a href="contact-admission.html">Contact</a><a href="enquiry.html">Enquiry</a>
-    </div>
+    <div class="navlinks"><a href="student-login.html">Student Login</a><a href="#courses">Courses</a><a href="#student">Student Corner</a><a href="#notices">विद्यार्थी सूचना</a><a href="#fees">Fees</a><a href="#practical-lab">Practical Lab</a><a href="test-portal.html">Online Test</a><a href="#practice">Practice</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a><a href="enquiry.html">Enquiry</a></div>
     <a class="btn" href="tel:6394036352">☎ Call Now</a>
   </nav>
 </header>
-<main id="home"><section class="hero"><div class="hero-inner"><div><span class="eyebrow">🎓 कंप्यूटर शिक्षा और डिजिटल स्किल्स</span><h1>सीखें आज,<br><em>बढ़ें कल!</em></h1><p>अपने भविष्य को डिजिटल कौशल के साथ मजबूत बनाइए। कंप्यूटर की बेसिक जानकारी से लेकर ऑफिस, अकाउंटिंग, डिजाइन और प्रोग्रामिंग तक सीखने का अवसर।</p><div class="heroactions"><a class="btn" href="courses.html">📚 Courses देखें</a><a class="btn secondary" href="https://wa.me/916394036352?text=Namaste%2C%20mujhe%20course%20ki%20jankari%20chahiye" target="_blank" rel="noopener">💬 WhatsApp पूछें</a><a class="btn secondary" href="online-test-portal.html">📝 Online Test</a></div></div><div class="heroimg"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1100&q=85" alt="Computer training and learning"><div class="imagebadge">💻 Practical Computer Learning</div></div></div></section>
+<main id="home"><section class="hero"><div class="hero-inner"><div><span class="eyebrow">🎓 कंप्यूटर शिक्षा और डिजिटल स्किल्स</span><h1>सीखें आज,<br><em>बढ़ें कल!</em></h1><p>अपने भविष्य को डिजिटल कौशल के साथ मजबूत बनाइए। कंप्यूटर की बेसिक जानकारी से लेकर ऑफिस, अकाउंटिंग, डिजाइन और प्रोग्रामिंग तक सीखने का अवसर।</p><div class="heroactions"><a class="btn" href="#courses">📚 Courses देखें</a><a class="btn secondary" href="https://wa.me/916394036352?text=Namaste%2C%20mujhe%20course%20ki%20jankari%20chahiye" target="_blank" rel="noopener">💬 WhatsApp पूछें</a><a class="btn secondary" href="test-portal.html">📝 Online Test</a></div></div><div class="heroimg"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1100&q=85" alt="Computer training and learning"><div class="imagebadge">💻 Practical Computer Learning</div></div></div></section>
 <div class="wrap" style="padding-top:25px;padding-bottom:15px"><div class="stats"><div class="stat"><b>💻</b><small>Computer Courses</small></div><div class="stat"><b>⌨️</b><small>Typing Practice</small></div><div class="stat"><b>📘</b><small>Study Notes</small></div><div class="stat"><b>🎯</b><small>Skill Development</small></div></div></div>
-<section class="wrap quick-access" aria-label="मुख्य सुविधाएँ"><div class="sectionhead"><span class="tag">Student Quick Access</span><h2>सभी सुविधाएँ एक क्लिक में</h2><p>जिस सुविधा की जरूरत हो, उसके रंगीन बटन पर क्लिक करें।</p></div><div class="quick-grid">
-<a class="quick-card q-course" href="courses.html"><span>🎓</span><b>सभी कोर्स</b><small>अपना कोर्स चुनें</small></a>
-<a class="quick-card q-student" href="advanced-learning.html"><span>🚀</span><b>पढ़ाई और प्रैक्टिस</b><small>O Level + सभी कोर्स · Advanced</small></a>
-<a class="quick-card q-typing" href="typing-practice.html"><span>⌨️</span><b>Typing Practice</b><small>हिंदी और English टाइपिंग</small></a>
-<a class="quick-card q-test" href="online-test-portal.html"><span>📝</span><b>Online Test</b><small>टेस्ट दें और स्कोर देखें</small></a>
-<a class="quick-card q-lab" href="o-level-practice-lab.html"><span>🎓</span><b>O Level Practical Lab</b><small>M1 से M4 तक अभ्यास</small></a>
-<a class="quick-card q-student" href="student-corner.html"><span>📚</span><b>Student Corner</b><small>नोट्स और पढ़ाई सामग्री</small></a>
-<a class="quick-card q-notice" href="notice-board.html"><span>📢</span><b>Notice Board</b><small>महत्वपूर्ण सूचनाएँ</small></a>
-<a class="quick-card q-gallery" href="institute-gallery.html"><span>🖼️</span><b>Institute Gallery</b><small>संस्थान की तस्वीरें</small></a>
-<a class="quick-card q-contact" href="contact-admission.html"><span>☎️</span><b>Contact / Admission</b><small>एडमिशन की जानकारी</small></a>
-</div></section>
-<section class="wrap" id="courses"><div class="sectionhead"><span class="tag">Explore Courses</span><h2>अपने लिए सही कोर्स चुनें</h2><p>कोर्स की जानकारी खोजें और सीधे एडमिशन के लिए संपर्क करें।</p><a class="big-course-toggle" id="courseToggle" href="courses.html">🎓 अपना सही कोर्स चुनें <span>→</span></a></div><div id="courseContent" hidden><div class="coursecontrols"><input id="courseSearch" type="search" placeholder="🔎 कोर्स खोजें जैसे Tally, DCA, Typing…" aria-label="Course search"></div><div class="courses" id="courseGrid">
+<section class="wrap" id="courses"><div class="sectionhead"><span class="tag">Explore Courses</span><h2>अपने लिए सही कोर्स चुनें</h2><p>कोर्स की जानकारी खोजें और सीधे एडमिशन के लिए संपर्क करें।</p></div><div class="coursecontrols"><input id="courseSearch" type="search" placeholder="🔎 कोर्स खोजें जैसे Tally, DCA, Typing…" aria-label="Course search"></div><div class="courses" id="courseGrid">
 <div class="course" data-course="basic computer basics कम्प्यूटर बेसिक"><div class="courseicon">🖥️</div><h3>Basic Computer</h3><p>कंप्यूटर परिचय, Windows, फाइल मैनेजमेंट, इंटरनेट और डिजिटल बेसिक्स।</p><span class="pill">Beginners</span><a class="enquire" href="https://wa.me/916394036352?text=Basic%20Computer%20course%20details" target="_blank">Course पूछें →</a><button class="course-detail-btn" type="button" onclick="toggleCourseDetails(this)" aria-expanded="false">विस्तृत जानकारी देखें <span>＋</span></button><div class="course-detail-panel" hidden><p class="course-detail-intro">बेसिक से कंप्यूटर सीखने वालों के लिए</p><h4>📚 मुख्य विषय / सिलेबस</h4><ul><li>कंप्यूटर का परिचय और प्रकार</li><li>हार्डवेयर व सॉफ्टवेयर</li><li>Windows और Desktop की जानकारी</li><li>फाइल व फोल्डर बनाना, कॉपी, मूव और डिलीट</li><li>हिंदी/अंग्रेज़ी टाइपिंग का परिचय</li><li>इंटरनेट, ब्राउज़र और ई-मेल</li><li>ऑनलाइन फॉर्म व डिजिटल सुरक्षा</li></ul><h4>🧑‍💻 प्रैक्टिकल में क्या सीखेंगे?</h4><p>फाइल-फोल्डर मैनेजमेंट, ई-मेल भेजना, इंटरनेट सर्च और सामान्य कंप्यूटर कार्य।</p><h4>🎯 किनके लिए उपयोगी?</h4><p>शुरुआती विद्यार्थी और कंप्यूटर का पहली बार उपयोग करने वाले।</p><p class="course-note">नोट: बैच, अवधि, फीस और उपलब्ध सर्टिफिकेट की जानकारी संस्थान से प्राप्त करें।</p></div></div>
 <div class="course" data-course="ccc course libreoffice writer calc impress computer fundamentals internet digital payment cyber security"><div class="courseicon">📗</div><h3>CCC</h3><p>NIELIT CCC के अनुसार कंप्यूटर, ऑफिस प्रोडक्टिविटी, इंटरनेट और डिजिटल सेवाओं की बुनियादी ट्रेनिंग।</p><span class="pill">NIELIT Foundation</span><a class="enquire" href="https://wa.me/916394036352?text=CCC%20course%20details" target="_blank" rel="noopener">Course पूछें →</a><button class="course-detail-btn" type="button" onclick="toggleCourseDetails(this)" aria-expanded="false">विस्तृत जानकारी देखें <span>＋</span></button><div class="course-detail-panel" hidden><p class="course-detail-intro">NIELIT CCC Revision 4 (01 अक्टूबर 2023 से लागू) के विषयों पर आधारित तैयारी।</p><h4>📚 मुख्य विषय / सिलेबस</h4><ul><li>कंप्यूटर परिचय: कंप्यूटर का विकास, उपयोग, हार्डवेयर, सॉफ्टवेयर, CPU, इनपुट/आउटपुट डिवाइस और मेमोरी</li><li>ऑपरेटिंग सिस्टम: डेस्कटॉप/लैपटॉप और मोबाइल OS, यूजर इंटरफेस, फाइल-फोल्डर और प्रिंटर प्रबंधन</li><li>Word Processing: दस्तावेज बनाना, खोलना, सेव करना, टेक्स्ट फॉर्मेटिंग, पैराग्राफ, टेबल, पेज सेटअप, प्रिंट और PDF</li><li>Spreadsheet: सेल, रो-कॉलम, डेटा एंट्री, फॉर्मेटिंग, फॉर्मूले, बेसिक फंक्शन, Sort, Filter और Charts</li><li>Presentation: स्लाइड बनाना, टेक्स्ट/चित्र/टेबल जोड़ना, थीम, ट्रांजिशन और Slide Show</li><li>Internet और WWW: ब्राउज़र, वेबसाइट, सर्च इंजन, नेटवर्क की मूल जानकारी और ऑनलाइन सेवाएँ</li><li>E-mail, Social Networking, e-Commerce और e-Governance सेवाएँ</li><li>Digital Financial Tools: UPI, इंटरनेट बैंकिंग, डिजिटल भुगतान और संबंधित सावधानियाँ</li><li>Future Skills और Cyber Security का परिचय</li></ul><h4>🧑‍💻 प्रैक्टिकल में उपयोग होने वाले ऑफिस टूल</h4><ul><li><b>LibreOffice Writer:</b> CCC के Word Processing भाग का अभ्यास</li><li><b>LibreOffice Calc:</b> CCC के Spreadsheet भाग का अभ्यास</li><li><b>LibreOffice Impress:</b> CCC के Presentation भाग का अभ्यास</li></ul><p>ये LibreOffice ऐप संस्थान में प्रैक्टिकल कराने के लिए चुने गए टूल हैं। NIELIT के CCC सिलेबस में इन भागों को Word Processing, Spreadsheet और Presentation के रूप में बताया गया है; सिलेबस किसी एक ब्रांड के सॉफ्टवेयर तक सीमित नहीं है।</p><h4>🎯 किनके लिए उपयोगी?</h4><p>शुरुआती विद्यार्थी और वे लोग जो कंप्यूटर व डिजिटल सेवाओं का बुनियादी उपयोग सीखना चाहते हैं।</p><p class="course-note">आधिकारिक पाठ्यक्रम: NIELIT CCC Revision 4. संस्थान में कराए जाने वाले अतिरिक्त अभ्यास बैच के अनुसार अलग हो सकते हैं।</p></div></div>
 <div class="course" data-course="o level nielit m1 m2 m3 m4 information technology network basics web designing publishing python internet of things iot"><div class="courseicon">🎓</div><h3>NIELIT O Level</h3><p>चार अनिवार्य पेपर: IT Tools & Network Basics, Web Designing, Python और IoT।</p><span class="pill">NIELIT · Revision 5.1</span><a class="enquire" href="https://wa.me/916394036352?text=NIELIT%20O%20Level%20course%20details" target="_blank" rel="noopener">Course पूछें →</a><button class="course-detail-btn" type="button" onclick="toggleCourseDetails(this)" aria-expanded="false">चारों पेपर का विस्तृत सिलेबस देखें <span>＋</span></button><div class="course-detail-panel" hidden><p class="course-detail-intro">NIELIT ‘O’ Level (IT) — Revision 5.1 के चार अनिवार्य थ्योरी मॉड्यूल। इनके साथ संबंधित प्रैक्टिकल परीक्षाएँ और प्रोजेक्ट भी पाठ्यक्रम का हिस्सा हैं।</p><h4>📘 Paper 1 — M1-R5.1: Information Technology Tools and Network Basics</h4><ul><li>कंप्यूटर और नवीन IT गैजेट्स, कंप्यूटर का विकास और उपयोग</li><li>हार्डवेयर, सॉफ्टवेयर, CPU, इनपुट/आउटपुट डिवाइस, मेमोरी और स्टोरेज</li><li>Desktop, Laptop और Mobile Operating System; फाइल-फोल्डर और प्रिंटर प्रबंधन</li><li>Word Processing: दस्तावेज, फॉर्मेटिंग, टेबल, Mail Merge, PDF और प्रिंटिंग</li><li>Spreadsheet: सेल, फॉर्मूले, फंक्शन, Sort/Filter, Advanced Filter, What-if Analysis, Pivot Table, Charts और Data Validation</li><li>Presentation: स्लाइड, टेम्पलेट, Master Slide, ऑब्जेक्ट, ट्रांजिशन, Slide Show और प्रिंटिंग</li><li>Computer Networks, LAN/WAN, Topology, Internet, WWW, URL, IP Address और ब्राउज़र</li><li>E-mail, Social Networking, e-Governance, Digital Financial Tools, Future Skills और Cyber Security</li></ul><h4>🌐 Paper 2 — M2-R5.1: Web Designing and Publishing</h4><ul><li>Web Design का परिचय: Website, Webpage, Front-end/Back-end, Client/Server और Responsive Design</li><li>Code Editors का उपयोग और फाइल बनाना/सेव करना</li><li>HTML और HTML5: Basic Structure, Text Formatting, Links, Images, Tables, Lists, Forms और Multimedia</li><li>CSS: Selectors, Background, Box, Border, Positioning, Lists, Tables, Menus और Image Gallery</li><li>CSS Framework — NIELIT सिलेबस में W3.CSS</li><li>JavaScript: Variables, Operators, Conditions, Events और Form Validation</li><li>AngularJS का परिचय: Expressions, Modules और Directives</li><li>Photo Editing के मूल टूल, Layers, Filters और Web Publishing/Hosting की बुनियाद</li></ul><h4>🐍 Paper 3 — M3-R5.1: Programming and Problem Solving through Python</h4><ul><li>Programming की मूल अवधारणाएँ, Algorithms और Flowcharts</li><li>Python Interpreter, Program Structure, Comments, Literals, Constants और Built-in Data Types</li><li>Numbers, Strings, Input/Output, Indexing और Slicing</li><li>Operators, Expressions, if/else और अन्य Conditional Statements</li><li>Loops: for, while, break, continue और pass</li><li>Sequence Data Types: List, Tuple और Dictionary</li><li>Built-in और User-defined Functions, Parameters, Return और Recursion</li><li>File Processing: फाइल खोलना, पढ़ना, लिखना और बंद करना</li><li>Modules, Scope और NumPy की मूल बातें</li></ul><h4>📡 Paper 4 — M4-R5.1: Internet of Things and its Applications</h4><ul><li>IoT का परिचय, उपयोग, Devices, Architecture, Building Blocks और Communication Models</li><li>Things and Connections: Feedback Loop, TCP/IP और OSI Model, Wired/Wireless Connectivity</li><li>Sensors, Actuators, Transducers और Microcontrollers</li><li>Arduino Platform और Arduino IDE का परिचय</li><li>Embedded C की बुनियाद: Variables, Data Types, Operators, Conditions, Loops, Arrays और Functions</li><li>Arduino के Digital/Analog Pins और Sensors/Actuators को जोड़ने का अभ्यास</li><li>IoT Applications, Device Security और IoT Ecosystem</li><li>सिलेबस में शामिल Soft Skills और Personality Development</li></ul><h4>🧪 प्रैक्टिकल और प्रोजेक्ट</h4><ul><li>M1 से M4 तक के विषयों पर आधारित चार Practical मॉड्यूल/परीक्षाएँ</li><li>प्रोजेक्ट: सीखी गई IT स्किल्स का उपयोग करके मौलिक, वास्तविक उपयोग वाला प्रोजेक्ट तैयार करना</li></ul><p class="course-note">सिलेबस स्रोत: NIELIT O Level (IT), Revision 5.1, जुलाई 2022. आधिकारिक संरचना में चार compulsory theory modules, practicals और project शामिल हैं। यह संस्थान की प्रशिक्षण जानकारी है; NIELIT पंजीकरण/परीक्षा संबंधी नियम अलग से लागू होते हैं।</p></div></div>
@@ -194,8 +163,8 @@
 <div class="course" data-course="advanced excel spreadsheet"><div class="courseicon">📈</div><h3>Advanced Excel</h3><p>Spreadsheet, formulas, charts और डेटा व्यवस्थित करने के उपयोगी टूल।</p><span class="pill">Office Skills</span><a class="enquire" href="https://wa.me/916394036352?text=Advanced%20Excel%20course%20details" target="_blank">Course पूछें →</a><button class="course-detail-btn" type="button" onclick="toggleCourseDetails(this)" aria-expanded="false">विस्तृत जानकारी देखें <span>＋</span></button><div class="course-detail-panel" hidden><p class="course-detail-intro">डेटा और रिपोर्टिंग के लिए Excel के एडवांस टूल्स</p><h4>📚 मुख्य विषय / सिलेबस</h4><ul><li>Advanced Formulas और Functions</li><li>IF, SUMIF, COUNTIF और Lookup का अभ्यास</li><li>Sort, Filter और Data Validation</li><li>Conditional Formatting</li><li>Charts और PivotTable का परिचय</li><li>What-if Analysis और Goal Seek</li><li>डेटा क्लीनिंग और रिपोर्ट तैयार करना</li></ul><h4>🧑‍💻 प्रैक्टिकल में क्या सीखेंगे?</h4><p>मार्कशीट, फीस रिकॉर्ड, सेल्स रिपोर्ट, सारांश और डेटा विश्लेषण शीट बनाना।</p><h4>🎯 किनके लिए उपयोगी?</h4><p>Excel का बेसिक ज्ञान रखने वाले और रिपोर्ट/डेटा कार्य सीखने वाले।</p><p class="course-note">नोट: बैच, अवधि, फीस और उपलब्ध सर्टिफिकेट की जानकारी संस्थान से प्राप्त करें।</p></div></div>
 <div class="course" data-course="hardware software computer repair"><div class="courseicon">🛠️</div><h3>Computer Hardware</h3><p>कंप्यूटर के पार्ट्स, सामान्य समस्या पहचान और हार्डवेयर परिचय।</p><span class="pill">Technical</span><a class="enquire" href="https://wa.me/916394036352?text=Hardware%20course%20details" target="_blank">Course पूछें →</a><button class="course-detail-btn" type="button" onclick="toggleCourseDetails(this)" aria-expanded="false">विस्तृत जानकारी देखें <span>＋</span></button><div class="course-detail-panel" hidden><p class="course-detail-intro">कंप्यूटर के पार्ट्स और सामान्य समस्या पहचान</p><h4>📚 मुख्य विषय / सिलेबस</h4><ul><li>कंप्यूटर के मुख्य भाग और उनका कार्य</li><li>Motherboard, Processor, RAM और Storage</li><li>Keyboard, Mouse, Monitor और Printer</li><li>केबल और पोर्ट की पहचान</li><li>कंप्यूटर असेंबली का परिचय</li><li>सामान्य हार्डवेयर समस्या पहचान</li><li>सुरक्षित सफाई और बेसिक मेंटेनेंस</li></ul><h4>🧑‍💻 प्रैक्टिकल में क्या सीखेंगे?</h4><p>पार्ट्स की पहचान, कनेक्शन समझना और सामान्य समस्या की शुरुआती जाँच।</p><h4>🎯 किनके लिए उपयोगी?</h4><p>हार्डवेयर और कंप्यूटर मेंटेनेंस में रुचि रखने वाले।</p><p class="course-note">नोट: बैच, अवधि, फीस और उपलब्ध सर्टिफिकेट की जानकारी संस्थान से प्राप्त करें।</p></div></div>
 <div class="course" data-course="internet digital skills online services"><div class="courseicon">🌐</div><h3>Internet & Digital Skills</h3><p>ईमेल, ऑनलाइन फॉर्म, डिजिटल सेवाएँ और इंटरनेट का सुरक्षित उपयोग।</p><span class="pill">Digital</span><a class="enquire" href="https://wa.me/916394036352?text=Digital%20skills%20course%20details" target="_blank">Course पूछें →</a><button class="course-detail-btn" type="button" onclick="toggleCourseDetails(this)" aria-expanded="false">विस्तृत जानकारी देखें <span>＋</span></button><div class="course-detail-panel" hidden><p class="course-detail-intro">इंटरनेट और रोजमर्रा की डिजिटल सेवाओं का सुरक्षित उपयोग</p><h4>📚 मुख्य विषय / सिलेबस</h4><ul><li>वेब ब्राउज़र और प्रभावी सर्च</li><li>ई-मेल बनाना और अटैचमेंट भेजना</li><li>ऑनलाइन फॉर्म भरना और दस्तावेज अपलोड</li><li>PDF डाउनलोड और प्रबंधन</li><li>डिजिटल भुगतान की सावधानियाँ</li><li>पासवर्ड और OTP सुरक्षा</li><li>सरकारी/नागरिक ऑनलाइन सेवाओं का परिचय</li></ul><h4>🧑‍💻 प्रैक्टिकल में क्या सीखेंगे?</h4><p>ई-मेल, ऑनलाइन आवेदन, PDF और सुरक्षित डिजिटल सेवाओं का उपयोग।</p><h4>🎯 किनके लिए उपयोगी?</h4><p>सभी आयु वर्ग के विद्यार्थी और डिजिटल काम सीखने वाले।</p><p class="course-note">नोट: बैच, अवधि, फीस और उपलब्ध सर्टिफिकेट की जानकारी संस्थान से प्राप्त करें।</p></div></div>
-</div><p id="noCourses" style="display:none;text-align:center;color:#64748b;padding:15px">इस नाम से कोर्स नहीं मिला। कोई दूसरा शब्द खोजें।</p></div></section>
-<section class="wrap" id="student"><div class="sectionhead"><span class="tag">Student Corner</span><h2>पढ़ाई और प्रैक्टिस का कोना</h2><p>यहां से विद्यार्थी कंप्यूटर नोट्स डाउनलोड कर सकते हैं और अपनी पढ़ाई के लिए सामग्री प्राप्त कर सकते हैं।</p></div><div class="resources"><div class="resource"><div class="big">📄</div><h3>Computer Notes PDF</h3><p>कंप्यूटर की बुनियादी जानकारी और नोट्स।</p><a href="pdf/computer-basics.pdf" onclick="return pdfNotice(event,this.href)">PDF डाउनलोड →</a></div><div class="resource"><div class="big">📝</div><h3>MS Office Notes</h3><p>Word, Excel और PowerPoint की पढ़ाई सामग्री।</p><a href="pdf/ms-office-notes.pdf" onclick="return pdfNotice(event,this.href)">PDF डाउनलोड →</a></div><div class="resource"><div class="big">⌨️</div><h3>Typing Practice</h3><p>हिंदी-अंग्रेजी टाइपिंग अभ्यास नोट्स।</p><a href="pdf/typing-practice.pdf" onclick="return pdfNotice(event,this.href)">PDF डाउनलोड →</a></div></div><div class="notice" style="margin-top:17px"><div class="icon">📌</div><div><b>विद्यार्थियों के लिए सूचना</b><p>अधिक अध्ययन सामग्री के लिए Student Login करें या संस्थान से संपर्क करें।</p></div></div></section>
+</div><p id="noCourses" style="display:none;text-align:center;color:#64748b;padding:15px">इस नाम से कोर्स नहीं मिला। कोई दूसरा शब्द खोजें।</p></section>
+<section class="wrap" id="student"><div class="sectionhead"><span class="tag">Student Corner</span><h2>पढ़ाई और प्रैक्टिस का कोना</h2><p>यहां से विद्यार्थी अभ्यास सामग्री और अध्ययन संसाधन देख सकते हैं। PDF लिंक सक्रिय करने के लिए वास्तविक फाइलें वेबसाइट में जोड़नी होंगी।</p></div><div class="resources"><div class="resource"><div class="big">📄</div><h3>Computer Notes PDF</h3><p>कंप्यूटर की बुनियादी जानकारी और नोट्स।</p><a href="pdf/computer-basics.pdf" onclick="return pdfNotice(event,this.href)">PDF डाउनलोड →</a></div><div class="resource"><div class="big">📝</div><h3>MS Office Notes</h3><p>Word, Excel और PowerPoint की पढ़ाई सामग्री।</p><a href="pdf/ms-office-notes.pdf" onclick="return pdfNotice(event,this.href)">PDF डाउनलोड →</a></div><div class="resource"><div class="big">⌨️</div><h3>Typing Practice</h3><p>हिंदी-अंग्रेजी टाइपिंग अभ्यास नोट्स।</p><a href="pdf/typing-practice.pdf" onclick="return pdfNotice(event,this.href)">PDF डाउनलोड →</a></div></div><div class="notice" style="margin-top:17px"><div class="icon">📌</div><div><b>विद्यार्थियों के लिए सूचना</b><p>नोट्स और नई सामग्री समय-समय पर यहां जोड़ी जा सकती है।</p></div></div></section>
 
 <section class="wrap" id="notices">
   <div class="sectionhead"><span class="tag">Student Notice Board</span><h2>विद्यार्थियों के लिए महत्वपूर्ण सूचनाएँ</h2><p>परीक्षा, नए बैच, छुट्टी, फीस और संस्थान के जरूरी निर्देश यहाँ देखें।</p></div>
@@ -232,20 +201,122 @@
   <div class="noticeboard-footer"><span>📌 महत्वपूर्ण: केवल संस्थान द्वारा सत्यापित सूचना को अंतिम मानें।</span><a class="portal-action" href="https://wa.me/916394036352?text=Namaste%2C%20mujhe%20student%20notice%20ki%20jankari%20chahiye" target="_blank" rel="noopener">सूचना पूछें →</a></div>
 </section>
 
-<section class="wrap" id="practical-lab">
-  <div class="sectionhead"><span class="tag">Hands-on Learning</span><h2>Computer Practical Labs</h2><p>अपनी जरूरत के अनुसार अलग-अलग प्रैक्टिकल लैब चुनें। हर बटन एक अलग पेज खोलेगा।</p></div>
-  <div class="lab-launch-grid">
-    <a class="lab-launch olevel" href="o-level-practice-lab.html"><span class="launch-icon">🎓</span><span><b>O LEVEL PRACTICAL LAB</b><small>M1 IT Tools · M2 Web Designing · M3 Python · M4 IoT</small><em>O Level प्रैक्टिकल खोलें →</em></span></a>
-    <a class="lab-launch advanced" href="advanced-practical-lab.html"><span class="launch-icon">🚀</span><span><b>ADVANCED COMPUTER PRACTICAL LAB</b><small>Advanced Excel · Web · Python · Tally GST · Designing · Hardware</small><em>Advanced प्रैक्टिकल खोलें →</em></span></a>
+<section class="wrap" id="fees">
+  <div class="sectionhead"><span class="tag">Course Fee Information</span><h2>कोर्स और फीस की जानकारी</h2><p>फीस कोर्स, बैच और संस्थान की वर्तमान योजना के अनुसार बदल सकती है। सही फीस प्रवेश से पहले संस्थान से कन्फर्म करें।</p></div>
+  <div class="fee-alert"><span class="fee-alert-icon">₹</span><div><b>फीस की सही जानकारी प्राप्त करें</b><p>पुरानी ऑफर फीस को वर्तमान फीस मानकर न चलें। रजिस्ट्रेशन, किस्त और कुल फीस की पुष्टि फोन या WhatsApp पर करें।</p></div></div>
+  <div class="fee-grid">
+    <article class="fee-card" data-fee-id="basic-computer"><span class="fee-icon">🖥️</span><h3>Basic Computer</h3><p>बेसिक कंप्यूटर प्रशिक्षण</p><b class="fee-value">फीस पूछें</b><a href="https://wa.me/916394036352?text=Basic%20Computer%20ki%20current%20fees%20bataye" target="_blank" rel="noopener">फीस की जानकारी →</a></article>
+    <article class="fee-card" data-fee-id="ccc"><span class="fee-icon">📗</span><h3>CCC</h3><p>NIELIT CCC तैयारी</p><b class="fee-value">फीस पूछें</b><a href="https://wa.me/916394036352?text=CCC%20ki%20current%20fees%20bataye" target="_blank" rel="noopener">फीस की जानकारी →</a></article>
+    <article class="fee-card" data-fee-id="o-level"><span class="fee-icon">🎓</span><h3>NIELIT O Level</h3><p>चारों पेपर की तैयारी</p><b class="fee-value">फीस पूछें</b><a href="https://wa.me/916394036352?text=O%20Level%20ki%20current%20fees%20bataye" target="_blank" rel="noopener">फीस की जानकारी →</a></article>
+    <article class="fee-card" data-fee-id="dca"><span class="fee-icon">📘</span><h3>DCA</h3><p>Diploma in Computer Application</p><b class="fee-value">फीस पूछें</b><a href="https://wa.me/916394036352?text=DCA%20ki%20current%20fees%20bataye" target="_blank" rel="noopener">फीस की जानकारी →</a></article>
+    <article class="fee-card" data-fee-id="adca"><span class="fee-icon">📚</span><h3>ADCA</h3><p>Advanced Diploma</p><b class="fee-value">फीस पूछें</b><a href="https://wa.me/916394036352?text=ADCA%20ki%20current%20fees%20bataye" target="_blank" rel="noopener">फीस की जानकारी →</a></article>
+    <article class="fee-card" data-fee-id="tally-prime-gst"><span class="fee-icon">📊</span><h3>Tally Prime & GST</h3><p>Accounting और GST Practical</p><b class="fee-value">फीस पूछें</b><a href="https://wa.me/916394036352?text=Tally%20Prime%20GST%20ki%20current%20fees%20bataye" target="_blank" rel="noopener">फीस की जानकारी →</a></article>
+  </div>
+  <div class="fee-details">
+    <div><b>रजिस्ट्रेशन फीस</b><span>वर्तमान राशि संस्थान से कन्फर्म करें</span></div>
+    <div><b>किस्त / भुगतान</b><span>उपलब्ध विकल्पों की जानकारी संपर्क पर</span></div>
+    <div><b>फीस रसीद</b><span>भुगतान के बाद संस्थान से रसीद प्राप्त करें</span></div>
+  </div>
+  <div class="fee-contact"><span>फीस, छूट या किस्त के बारे में पूछना है?</span><a class="btn" href="https://wa.me/916394036352?text=Namaste%2C%20mujh
+<section class="wrap admin-section" id="admin">
+  <div class="sectionhead"><span class="tag">Secure Fee Management</span><h2>🔐 Admin Fee Panel</h2><p>केवल अधिकृत संस्थान एडमिन लॉगिन करके फीस अपडेट कर सकेगा।</p></div>
+  <div class="admin-card">
+    <div class="admin-security-note"><b>सुरक्षा:</b> यह पैनल Firebase Authentication और Cloud Firestore से जुड़ेगा। कोई पासवर्ड HTML फाइल में सेव नहीं किया गया है। पहले Firebase सेटअप पूरा करना जरूरी है।</div>
+    <form id="adminLoginForm" class="admin-form">
+      <label for="adminEmail">Admin Email</label><input id="adminEmail" type="email" autocomplete="username" required placeholder="अपना Admin Email लिखें">
+      <label for="adminPassword">Password</label><input id="adminPassword" type="password" autocomplete="current-password" required placeholder="अपना Admin Password लिखें">
+      <button class="toolbtn" type="submit">🔓 सुरक्षित लॉगिन</button>
+      <p id="adminAuthMessage" class="admin-message" aria-live="polite">Firebase कॉन्फ़िगरेशन जोड़ने के बाद लॉगिन सक्रिय होगा।</p>
+    </form>
+    <div id="adminEditor" hidden>
+      <div class="admin-editor-head"><div><b>फीस अपडेट करें</b><small>बदलाव सेव करने पर वेबसाइट के सभी विज़िटर को नई फीस दिखेगी।</small></div><button type="button" class="toolbtn alt" id="adminLogout">लॉगआउट</button></div>
+      <div class="admin-fee-grid" id="adminFeeGrid"></div>
+      <p id="adminSaveMessage" class="admin-message" aria-live="polite"></p>
+    </div>
   </div>
 </section>
+e%20course%20fees%20aur%20registration%20ki%20jankari%20chahiye" target="_blank" rel="noopener">💬 WhatsApp पर पूछें</a></div>
+</section>
+
+<section class="wrap" id="practical-lab">
+  <div class="sectionhead"><span class="tag">Hands-on Learning</span><h2>Advanced Practical Lab</h2><p>सीखें, कोड लिखें, चलाएँ और अपने प्रोजेक्ट तैयार करें। O Level के चार संबंधित क्षेत्रों के लिए अभ्यास सामग्री।</p></div>
+  <div class="lab-hero"><div><span class="lab-kicker">NEW HI TECH · DIGITAL PRACTICE</span><h3>Learn • Practice • Build</h3><p>चार मुख्य लैब — एक ही जगह। हर भाग में निर्देश, अभ्यास कार्य और उपयोगी टूल दिए गए हैं।</p></div><div class="lab-orbit">⌘<span>LAB</span></div></div>
+  <div class="lab-tabs" role="tablist" aria-label="Practical Lab categories">
+    <button class="lab-tab active" type="button" data-lab-tab="it" role="tab" aria-selected="true">🧰 IT Tools</button>
+    <button class="lab-tab" type="button" data-lab-tab="web" role="tab" aria-selected="false">🌐 Web Designing</button>
+    <button class="lab-tab" type="button" data-lab-tab="python" role="tab" aria-selected="false">🐍 Python</button>
+    <button class="lab-tab" type="button" data-lab-tab="iot" role="tab" aria-selected="false">📡 IoT</button>
+  </div>
+
+  <div class="lab-panel active" data-lab-panel="it" role="tabpanel">
+    <div class="lab-panel-head"><div><span class="lab-label">01 · OFFICE & DIGITAL SKILLS</span><h3>IT Tools Practical</h3><p>Writer, Calc, Impress, Database और Internet के अभ्यास कार्य।</p></div><span class="lab-panel-icon">🧰</span></div>
+    <div class="lab-task-grid">
+      <article class="lab-task"><b>📝 Writer</b><p>आवेदन पत्र, Resume, टेबल, पेज सेटअप और PDF बनाना।</p><span>अभ्यास: एक पेज का Resume तैयार करें।</span></article>
+      <article class="lab-task"><b>📊 Calc</b><p>डेटा एंट्री, सेल फॉर्मेटिंग, फॉर्मूले, Sort, Filter और Chart।</p><span>अभ्यास: विद्यार्थियों की मार्कशीट बनाएँ।</span></article>
+      <article class="lab-task"><b>📽️ Impress</b><p>स्लाइड, थीम, चित्र, टेबल, ट्रांजिशन और Slide Show।</p><span>अभ्यास: अपने संस्थान पर 5 स्लाइड बनाएँ।</span></article>
+      <article class="lab-task"><b>🗃️ Database</b><p>टेबल, Field, Record, Data Type, Query, Form और Report की मूल समझ।</p><span>अभ्यास: Student Record का नमूना डेटाबेस बनाएं।</span></article>
+      <article class="lab-task"><b>🌍 Internet & Email</b><p>सर्च, सुरक्षित ब्राउज़िंग, ई-मेल, अटैचमेंट और ऑनलाइन सेवाएँ।</p><span>अभ्यास: विषय सहित ई-मेल ड्राफ्ट करें।</span></article>
+      <article class="lab-task"><b>📁 File Management</b><p>फोल्डर, फाइल एक्सटेंशन, कॉपी, मूव, Rename और Backup।</p><span>अभ्यास: विषयवार फोल्डर संरचना बनाएँ।</span></article>
+    </div>
+    <div class="lab-note">नोट: ये अभ्यास कार्य हैं। Writer, Calc, Impress और Database के वास्तविक सॉफ्टवेयर प्रैक्टिकल कंप्यूटर पर किए जाएँगे।</div>
+  </div>
+
+  <div class="lab-panel" data-lab-panel="web" role="tabpanel" hidden>
+    <div class="lab-panel-head"><div><span class="lab-label">02 · BUILD A WEBSITE</span><h3>Web Designing Lab</h3><p>HTML, CSS और JavaScript लिखें और नीचे Live Preview देखें।</p></div><span class="lab-panel-icon">🌐</span></div>
+    <div class="web-editor">
+      <div class="editor-toolbar"><b>Code Playground</b><span>HTML + CSS + JS</span><button type="button" class="toolbtn" id="runWebCode">▶ Run Preview</button></div>
+      <label class="editor-label" for="webHtml">HTML</label><textarea id="webHtml" class="code-editor" spellcheck="false"><h1>नमस्ते विद्यार्थी!</h1>
+<p>यह मेरा पहला Web Page है।</p>
+<button onclick="document.getElementById('msg').textContent='बहुत अच्छा! आपका बटन काम कर रहा है।'">Click करें</button>
+<p id="msg"></p></textarea>
+      <label class="editor-label" for="webCss">CSS</label><textarea id="webCss" class="code-editor short-code" spellcheck="false">body { font-family: Arial, sans-serif; padding: 20px; background: #f0f7ff; }
+h1 { color: #1459d9; }
+button { padding: 10px 16px; border: 0; border-radius: 8px; background: #1459d9; color: white; }</textarea>
+      <label class="editor-label" for="webJs">JavaScript (वैकल्पिक)</label><textarea id="webJs" class="code-editor short-code" spellcheck="false">// अपना JavaScript यहां लिखें</textarea>
+      <div class="preview-heading">Live Output <span>Preview सुरक्षित sandbox में खुलेगा</span></div>
+      <iframe id="webPreview" title="Web designing live preview" sandbox="allow-scripts" class="web-preview" srcdoc="<h2>Run Preview दबाएँ</h2>"></iframe>
+    </div>
+    <div class="lab-note">सुझाव: पहले HTML structure बनाएँ, फिर CSS से डिजाइन करें और अंत में JavaScript जोड़ें। Preview आपके ब्राउज़र में चलता है; कोड सर्वर पर सेव नहीं होता।</div>
+  </div>
+
+  <div class="lab-panel" data-lab-panel="python" role="tabpanel" hidden>
+    <div class="lab-panel-head"><div><span class="lab-label">03 · PROGRAMMING PRACTICE</span><h3>Python Programming Lab</h3><p>Python की बुनियाद से प्रोग्राम और छोटे प्रोजेक्ट तक अभ्यास करें।</p></div><span class="lab-panel-icon">🐍</span></div>
+    <div class="python-roadmap">
+      <div><b>01 · Basics</b><span>print, input, variables, data types</span></div><div><b>02 · Logic</b><span>operators, if/else, loops</span></div><div><b>03 · Collections</b><span>String, List, Tuple, Dictionary</span></div><div><b>04 · Functions</b><span>functions, parameters, return</span></div><div><b>05 · Files</b><span>file read, write और modules</span></div><div><b>06 · Projects</b><span>calculator, marksheet, number game</span></div>
+    </div>
+    <div class="python-code-card"><div><b>उदाहरण Python Program</b><button type="button" class="toolbtn alt" id="copyPythonExample">कोड कॉपी करें</button></div><pre id="pythonExample">name = input("अपना नाम लिखें: ")
+print("नमस्ते", name)
+
+a = 25
+b = 15
+print("योग =", a + b)</pre><a class="portal-action" href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener">Online Python Compiler खोलें ↗</a></div>
+    <div class="lab-note">Python को चलाने के लिए ऑनलाइन compiler खुलेगा। बाहरी compiler की अपनी शर्तें और उपलब्धता लागू होंगी।</div>
+  </div>
+
+  <div class="lab-panel" data-lab-panel="iot" role="tabpanel" hidden>
+    <div class="lab-panel-head"><div><span class="lab-label">04 · INTERNET OF THINGS</span><h3>IoT Practical Lab</h3><p>Arduino, Sensors, circuits और connected devices के प्रोजेक्ट का simulation अभ्यास।</p></div><span class="lab-panel-icon">📡</span></div>
+    <div class="iot-feature-grid">
+      <article class="iot-feature"><span>🔌</span><b>Arduino & Boards</b><p>Arduino Uno, ESP32 और microcontroller का परिचय।</p></article>
+      <article class="iot-feature"><span>💡</span><b>LED & Push Button</b><p>LED blinking और button input का simulation।</p></article>
+      <article class="iot-feature"><span>🌡️</span><b>Sensor Practice</b><p>Temperature, LDR, ultrasonic और motion sensor के उदाहरण।</p></article>
+      <article class="iot-feature"><span>⚙️</span><b>Actuators</b><p>Buzzer, servo motor और output devices का अभ्यास।</p></article>
+    </div>
+    <div class="simulator-links">
+      <a class="simulator-card" href="https://wokwi.com/" target="_blank" rel="noopener"><span class="simulator-logo">W</span><span><b>Wokwi Simulator</b><small>Arduino, ESP32 और electronic circuits का online simulation</small><strong>Simulator खोलें ↗</strong></span></a>
+      <a class="simulator-card" href="https://www.tinkercad.com/circuits" target="_blank" rel="noopener"><span class="simulator-logo tink">T</span><span><b>Tinkercad Circuits</b><small>Virtual circuits, Arduino और components का अभ्यास</small><strong>Simulator खोलें ↗</strong></span></a>
+    </div>
+    <div class="lab-note">ये बाहरी simulator हैं। कुछ सुविधाओं के लिए account/login की जरूरत हो सकती है। Virtual simulation वास्तविक Arduino board और sensors का विकल्प नहीं है; hardware practical के लिए असली उपकरण चाहिए।</div>
+  </div>
+  <div class="lab-bottom"><b>🎯 Practical सीखने का तरीका</b><span>पहले निर्देश पढ़ें → उदाहरण देखें → स्वयं अभ्यास करें → अपना काम शिक्षक से जाँच करवाएँ।</span></div>
+</section>
+
 <section class="wrap" id="gallery"><div class="sectionhead"><span class="tag">Institute Gallery</span><h2>सीखने का माहौल</h2><p>यह नमूना फोटो गैलरी है। अपनी वास्तविक संस्थान और कंप्यूटर लैब की फोटो बाद में यहां लगा सकते हैं।</p></div><div class="slideshow"><img id="slideImg" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=85" alt="Computer learning gallery"><div class="slidecaption" id="slideCaption">कंप्यूटर और डिजिटल लर्निंग</div><div class="slidebuttons"><button onclick="prevSlide()" aria-label="Previous image">‹</button><button onclick="nextSlide()" aria-label="Next image">›</button></div></div></section>
 <section class="wrap"><div class="sectionhead"><span class="tag">Why Learn With Us</span><h2>कौशल जो आगे काम आए</h2></div><div class="features"><div class="feature"><div class="big">🧑‍🏫</div><h3>आसान सीखने का तरीका</h3><p>बुनियादी बातों से शुरुआत और चरणबद्ध अभ्यास।</p></div><div class="feature"><div class="big">🖥️</div><h3>प्रैक्टिकल पर जोर</h3><p>सीखी हुई बातों को कंप्यूटर पर अभ्यास करने की प्रेरणा।</p></div><div class="feature"><div class="big">🚀</div><h3>डिजिटल भविष्य</h3><p>पढ़ाई, ऑफिस और रोजमर्रा के लिए उपयोगी डिजिटल स्किल्स।</p></div></div></section>
 <section class="wrap"><div class="sectionhead"><span class="tag">FAQs</span><h2>अक्सर पूछे जाने वाले सवाल</h2></div><div class="faq"><details><summary>एडमिशन कैसे लें?</summary><p>फोन या WhatsApp पर संपर्क करें अथवा संस्थान पर आकर कोर्स की जानकारी लें।</p></details><details><summary>क्या शुरुआती विद्यार्थी भी कोर्स कर सकते हैं?</summary><p>बेसिक कंप्यूटर जैसे शुरुआती कोर्स से सीखना शुरू किया जा सकता है। कोर्स चुनने में संस्थान से सलाह लें।</p></details><details><summary>PDF नोट्स कैसे डाउनलोड करें?</summary><p>Student Corner में उपलब्ध PDF लिंक पर क्लिक करें। लिंक तभी काम करेगा जब संबंधित PDF फाइल वेबसाइट पर अपलोड होगी।</p></details><details><summary>संस्थान कहां स्थित है?</summary><p>Near Medical College, In front of Krishi Vigyan Kendra, Bahraich.</p></details></div></section>
 
 <section class="wrap" id="practice"><div class="sectionhead"><span class="tag">Practice Zone</span><h2>ऑनलाइन टेस्ट और टाइपिंग अभ्यास</h2><p>विद्यार्थी यहीं सवाल हल करके अपना स्कोर देखें और टाइपिंग स्पीड का अभ्यास करें।</p></div>
 <div class="learningtools">
-<div class="toolcard"><h3>📝 Online Test Portal</h3><p>CCC, Computer Basics, MS Office जैसे विषयों का टेस्ट अलग पेज पर दें। कोर्स चुनें, Start Test दबाएं, टाइमर के साथ परीक्षा दें और रिजल्ट देखें।</p><a class="toolbtn" href="online-test-portal.html" style="display:inline-block;text-decoration:none">ऑनलाइन टेस्ट खोलें →</a></div>
+<div class="toolcard"><h3>📝 Online Test Portal</h3><p>CCC, Computer Basics, MS Office जैसे विषयों का टेस्ट अलग पेज पर दें। कोर्स चुनें, Start Test दबाएं, टाइमर के साथ परीक्षा दें और रिजल्ट देखें।</p><a class="toolbtn" href="updated-test-portal.html" style="display:inline-block;text-decoration:none">ऑनलाइन टेस्ट खोलें →</a></div>
 <div class="toolcard typing-card"><h3>⌨️ एडवांस टाइपिंग प्रैक्टिस</h3><p>हिंदी और English में स्तर चुनकर समयबद्ध अभ्यास करें। स्पीड, शुद्धता और गलतियों का लाइव परिणाम देखें।</p>
 <div class="typing-options"><label>भाषा<select id="typingLanguage"><option value="en">English</option><option value="hi">हिंदी</option></select></label><label>स्तर<select id="typingLevel"><option value="easy">आसान</option><option value="medium" selected>मध्यम</option><option value="hard">कठिन</option></select></label><label>समय<select id="typingDuration"><option value="60">1 मिनट</option><option value="180">3 मिनट</option><option value="300">5 मिनट</option><option value="600">10 मिनट</option><option value="900">15 मिनट</option><option value="1200" selected>20 मिनट</option></select></label><label id="typingHindiModeWrap" style="display:none">हिंदी टाइपिंग पद्धति<select id="typingHindiMode"><option value="unicode">Mangal Font + InScript (Unicode)</option><option value="krutidev">Kruti Dev 010 (Legacy)</option></select></label></div>
 <div class="typing-hint typing-mode-note" id="typingModeNote">हिंदी चुनने पर Mangal/Unicode या Kruti Dev 010 पद्धति चुन सकते हैं। InScript और Kruti Dev की-बोर्ड लेआउट कंप्यूटर में सेट होना चाहिए।</div>
@@ -257,7 +328,7 @@
 <p class="typing-hint">सुझाव: पहले शुद्धता पर ध्यान दें, फिर धीरे-धीरे गति बढ़ाएँ। WPM की गणना 5 अक्षर = 1 शब्द के मानक से होती है। 20 मिनट तक लगातार अभ्यास कर सकते हैं; पूरा पैराग्राफ होने पर अगला पैराग्राफ अपने-आप जुड़ जाएगा। अभ्यास का डेटा इसी ब्राउज़र में अस्थायी रहता है।</p><div class="toolresult" id="typingResult" aria-live="polite"></div></div>
 </div></section>
 <section class="wrap" id="contact"><div class="contactbox"><div><h2>अपने करियर की शुरुआत करें!</h2><p>कोर्स, फीस, समय और एडमिशन की जानकारी के लिए अभी संपर्क करें।<br>📍 Near Medical College, in front of Krishi Vigyan Kendra, Bahraich<br>📞 <a href="tel:7408479110" style="font-weight:900;color:white">7408479110</a>📞 <a href="tel:6394036352" style="font-weight:900;color:white">6394036352</a></p></div><div class="contactactions"><a class="btn" href="https://wa.me/916394036352?text=Namaste%2C%20mujhe%20admission%20aur%20course%20ki%20jankari%20chahiye" target="_blank" rel="noopener">💬 WhatsApp</a><a class="btn secondary" href="tel:6394036352">📞 Call Now</a></div></div></section>
-</main><footer class="footer"><div class="footerinner"><div><b>NEW HI TECH COMPUTER INSTITUTE</b><br><small>Learn · Practice · Grow</small><div class="socialhead" style="margin-top:16px">हमसे सोशल मीडिया पर जुड़ें</div><div class="sociallinks"><a class="wa" href="https://wa.me/916394036352?text=Namaste%2C%20mujhe%20institute%20ki%20jankari%20chahiye" target="_blank" rel="noopener">💬 WhatsApp</a><span class="social-pending">📸 Instagram · 📘 Facebook · 𝕏 X · ▶ YouTube (प्रोफाइल लिंक जोड़ना बाकी)</span></div><small class="socialnote">सोशल मीडिया के संस्थान-विशेष प्रोफाइल लिंक मिलने पर इन्हें यहां जोड़ा जाएगा।</small></div><div><small>Near Medical College, In front of Krishi Vigyan Kendra, Bahraich</small><br><small>Phone: <a href="tel:6394036352" style="color:#fff">6394036352</a></small></div><small>© <span id="year"></span> New Hi Tech Computer Institute</small></div></footer><button class="backtop" id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button><div class="toast" id="toast"></div>
+</main><footer class="footer"><div class="footerinner"><div><b>NEW HI TECH COMPUTER INSTITUTE</b><br><small>Learn · Practice · Grow</small><div class="socialhead" style="margin-top:16px">हमसे सोशल मीडिया पर जुड़ें</div><div class="sociallinks"><a class="wa" href="https://wa.me/916394036352?text=Namaste%2C%20mujhe%20institute%20ki%20jankari%20chahiye" target="_blank" rel="noopener">💬 WhatsApp</a><a href="https://www.instagram.com/" target="_blank" rel="noopener">📸 Instagram</a><a href="https://www.facebook.com/" target="_blank" rel="noopener">📘 Facebook</a><a href="https://x.com/" target="_blank" rel="noopener">𝕏 X</a><a href="https://www.youtube.com/" target="_blank" rel="noopener">▶ YouTube</a></div><small class="socialnote">Instagram, Facebook, X और YouTube के लिंक अभी उनके मुख्य पेज पर खुलते हैं। संस्थान के अपने प्रोफाइल लिंक मिलने पर इन्हें सीधे आपके पेज से जोड़ा जा सकता है।</small></div><div><small>Near Medical College, In front of Krishi Vigyan Kendra, Bahraich</small><br><small>Phone: <a href="tel:6394036352" style="color:#fff">6394036352</a></small></div><small><a href="#admin" style="color:#cfe1ff">🔐 Admin Fees</a></small><small>© <span id="year"></span> New Hi Tech Computer Institute</small></div></footer><button class="backtop" id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button><div class="toast" id="toast"></div>
 <script>
 const slides=[{src:'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=85',caption:'कंप्यूटर और डिजिटल लर्निंग'},{src:'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85',caption:'नई तकनीक के साथ सीखें'},{src:'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=85',caption:'टीमवर्क और डिजिटल स्किल्स'},{src:'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=85',caption:'प्रैक्टिस से बेहतर कौशल'}];let slideIndex=0;function showSlide(i){slideIndex=(i+slides.length)%slides.length;document.getElementById('slideImg').src=slides[slideIndex].src;document.getElementById('slideCaption').textContent=slides[slideIndex].caption}function nextSlide(){showSlide(slideIndex+1)}function prevSlide(){showSlide(slideIndex-1)}setInterval(nextSlide,5000);
 const search=document.getElementById('courseSearch');search.addEventListener('input',()=>{const term=search.value.toLowerCase().trim();let visible=0;document.querySelectorAll('.course').forEach(card=>{const match=card.dataset.course.toLowerCase().includes(term)||card.innerText.toLowerCase().includes(term);card.style.display=match?'':'none';if(match)visible++});document.getElementById('noCourses').style.display=visible?'none':'block'});
@@ -388,32 +459,101 @@ document.getElementById('copyPythonExample')?.addEventListener('click',()=>{
   else{showToast('कोड को चुनकर कॉपी करें।');}
 });
 
-document.getElementById('courseToggle')?.addEventListener('click',()=>{const btn=document.getElementById('courseToggle');const panel=document.getElementById('courseContent');const open=btn.getAttribute('aria-expanded')!=='true';btn.setAttribute('aria-expanded',String(open));panel.hidden=!open;if(open){panel.scrollIntoView({behavior:'smooth',block:'start'});}});
 </script>
-<script>
-/* Accessible mobile navigation */
-(function(){
-  const toggle = document.getElementById('mobileMenuToggle');
-  const links = document.getElementById('mainNavLinks');
-  if (!toggle || !links) return;
-  const closeMenu = () => {
-    links.classList.remove('open');
-    toggle.setAttribute('aria-expanded','false');
-    toggle.setAttribute('aria-label','मेन्यू खोलें');
-  };
-  toggle.addEventListener('click', () => {
-    const willOpen = toggle.getAttribute('aria-expanded') !== 'true';
-    toggle.setAttribute('aria-expanded', String(willOpen));
-    toggle.setAttribute('aria-label', willOpen ? 'मेन्यू बंद करें' : 'मेन्यू खोलें');
-    links.classList.toggle('open', willOpen);
-  });
-  links.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-  document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
-  document.addEventListener('click', event => {
-    if (!toggle.contains(event.target) && !links.contains(event.target)) closeMenu();
-  });
-  window.addEventListener('resize', () => { if (window.innerWidth > 850) closeMenu(); });
-})();
-</script>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getFirestore, doc, getDoc, setDoc, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
+/* Firebase Console से अपनी Web App की config यहाँ भरें। यह सार्वजनिक project config है,
+   लेकिन Admin password कभी यहाँ न लिखें। Authentication में केवल अपना admin user बनाएँ। */
+const firebaseConfig = {
+  apiKey: "AIzaSyCJMtm6qwB9GKeCSyMvhHwafdWcnP4r47c",
+  authDomain: "new-hi-tech-computer-institute.firebaseapp.com",
+  projectId: "new-hi-tech-computer-institute",
+  storageBucket: "new-hi-tech-computer-institute.firebasestorage.app",
+  messagingSenderId: "805608766416",
+  appId: "1:805608766416:web:2698bb85eca8e52c1057d5"
+};
+const configured = Object.values(firebaseConfig).every(v => v && !String(v).startsWith("PASTE_"));
+const loginForm = document.getElementById("adminLoginForm");
+const editor = document.getElementById("adminEditor");
+const authMessage = document.getElementById("adminAuthMessage");
+const saveMessage = document.getElementById("adminSaveMessage");
+const feeGrid = document.getElementById("adminFeeGrid");
+const feeNames = [
+  ["basic-computer","Basic Computer"],["ccc","CCC"],["o-level","NIELIT O Level"],
+  ["dca","DCA"],["adca","ADCA"],["tally-prime-gst","Tally Prime & GST"]
+];
+let auth = null, db = null, currentUser = null;
+
+function setFeeCard(id, data) {
+  const card = document.querySelector(`[data-fee-id="${id}"]`);
+  if (!card || !data) return;
+  const value = card.querySelector(".fee-value");
+  if (!value) return;
+  const amount = data.offerFee || data.fee || "";
+  value.textContent = amount ? `₹${amount}` : "फीस पूछें";
+  let details = card.querySelector(".fee-admin-details");
+  if (!details) { details = document.createElement("small"); details.className = "fee-admin-details"; value.insertAdjacentElement("afterend", details); }
+  const lines = [];
+  if (data.oldFee) lines.push(`पुरानी फीस: ₹${data.oldFee}`);
+  if (data.registrationFee) lines.push(`रजिस्ट्रेशन: ₹${data.registrationFee}`);
+  if (data.installment) lines.push(`किस्त: ${data.installment}`);
+  details.textContent = lines.join(" · ");
+}
+async function loadPublicFees() {
+  if (!configured) return;
+  try {
+    const snap = await getDocs(collection(db, "courseFees"));
+    snap.forEach(d => setFeeCard(d.id, d.data()));
+  } catch (e) { console.warn("Public fee data could not be loaded:", e); }
+}
+function renderEditor(dataMap = {}) {
+  feeGrid.innerHTML = "";
+  feeNames.forEach(([id,name]) => {
+    const d = dataMap[id] || {};
+    const card = document.createElement("div"); card.className = "admin-fee-item";
+    card.innerHTML = `<h3>${name}</h3>
+      <label>पुरानी फीस (₹)<input type="number" min="0" data-field="oldFee" value="${d.oldFee || ""}" placeholder="जैसे 6500"></label>
+      <label>वर्तमान / ऑफर फीस (₹)<input type="number" min="0" data-field="offerFee" value="${d.offerFee || d.fee || ""}" placeholder="जैसे 4500"></label>
+      <label>रजिस्ट्रेशन फीस (₹)<input type="number" min="0" data-field="registrationFee" value="${d.registrationFee || ""}" placeholder="जैसे 100"></label>
+      <label>किस्त की जानकारी<input type="text" maxlength="100" data-field="installment" value="${(d.installment || "").replace(/&/g,"&amp;").replace(/"/g,"&quot;")}" placeholder="जैसे 2 किस्तों में"></label>
+      <button class="toolbtn" type="button" data-save="${id}">💾 ${name} की फीस सेव करें</button>`;
+    feeGrid.appendChild(card);
+  });
+  feeGrid.querySelectorAll("[data-save]").forEach(btn => btn.addEventListener("click", async () => {
+    const id = btn.dataset.save, card = btn.closest(".admin-fee-item"), payload = {};
+    card.querySelectorAll("[data-field]").forEach(input => { payload[input.dataset.field] = input.value.trim(); });
+    payload.updatedAt = new Date().toISOString();
+    try {
+      await setDoc(doc(db, "courseFees", id), payload, { merge:true });
+      setFeeCard(id, payload); saveMessage.textContent = "फीस सफलतापूर्वक सेव हो गई और वेबसाइट पर अपडेट हो गई।";
+    } catch (e) { saveMessage.textContent = "सेव नहीं हो सकी: " + e.message; }
+  }));
+}
+async function loadEditorData() {
+  const map = {};
+  const snap = await getDocs(collection(db, "courseFees"));
+  snap.forEach(d => map[d.id] = d.data());
+  renderEditor(map);
+}
+if (!configured) {
+  authMessage.textContent = "Admin Login चालू करने के लिए Firebase Project की Web App config जोड़ना बाकी है।";
+  loginForm.addEventListener("submit", e => { e.preventDefault(); authMessage.textContent = "पहले Firebase config सेटअप करें; अभी लॉगिन सक्रिय नहीं है।"; });
+} else {
+  const app = initializeApp(firebaseConfig); auth = getAuth(app); db = getFirestore(app);
+  await loadPublicFees();
+  loginForm.addEventListener("submit", async e => {
+    e.preventDefault(); authMessage.textContent = "लॉगिन जाँचा जा रहा है…";
+    try { await signInWithEmailAndPassword(auth, document.getElementById("adminEmail").value.trim(), document.getElementById("adminPassword").value); }
+    catch (err) { authMessage.textContent = "लॉगिन नहीं हुआ: " + err.message; }
+  });
+  onAuthStateChanged(auth, async user => {
+    currentUser = user; editor.hidden = !user; loginForm.hidden = !!user;
+    if (user) { authMessage.textContent = "सुरक्षित लॉगिन सफल।"; try { await loadEditorData(); } catch(e) { saveMessage.textContent = "डेटा लोड नहीं हुआ: " + e.message; } }
+  });
+  document.getElementById("adminLogout").addEventListener("click", () => signOut(auth));
+}
+</script>
 </body></html>
