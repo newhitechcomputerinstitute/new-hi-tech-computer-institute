@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071b49"><title>O Level Practical Lab | New Hi Tech Computer Institute</title>
+<style>
+:root{--navy:#071b49;--blue:#0866e8;--cyan:#10c9df;--ink:#14264b;--muted:#667795;--line:#dce6f6;--paper:#f4f8ff;--white:#fff}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;min-height:100vh}.top{background:linear-gradient(110deg,#06163c,#0a3c91 65%,#087bd8);color:white;padding:13px clamp(14px,3vw,34px);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.brand{font-weight:900;letter-spacing:.2px}.brand small{display:block;font-size:11px;font-weight:500;opacity:.8;margin-top:3px}.top a{color:white;text-decoration:none;border:1px solid #ffffff55;padding:9px 13px;border-radius:10px;font-size:13px}.wrap{max-width:1600px;margin:auto;padding:clamp(12px,2vw,26px)}.heading{display:flex;align-items:end;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:18px}.eyebrow{color:#0875d8;font-weight:800;font-size:12px;letter-spacing:1.5px}.heading h1{font-size:clamp(25px,4vw,42px);margin:5px 0;color:#09265d}.heading p{margin:0;color:var(--muted)}.tabs{display:flex;gap:9px;flex-wrap:wrap;margin:18px 0}.tab{border:1px solid #cbdaf2;background:white;color:#173463;padding:12px 19px;border-radius:13px;font-weight:800;cursor:pointer}.tab.active{background:linear-gradient(110deg,#0759d7,#08a9df);border-color:transparent;color:white;box-shadow:0 8px 20px #0759d733}.workspace{background:white;border:1px solid var(--line);border-radius:19px;overflow:hidden;box-shadow:0 14px 40px #163e7812}.bar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:12px 16px;background:#f8fbff;border-bottom:1px solid var(--line)}.bar strong{font-size:14px}.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;background:#eaf2ff;color:#17417d}.btn.primary{background:linear-gradient(110deg,#075ce0,#09a9d7);color:white}.btn.dark{background:#102954;color:white}.btn:disabled{opacity:.55;cursor:wait}.editors{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:560px}.pane{min-width:0;display:flex;flex-direction:column}.pane+ .pane{border-left:1px solid var(--line)}.pane-title{padding:10px 14px;background:#f5f8fd;border-bottom:1px solid var(--line);font-size:12px;font-weight:900;letter-spacing:.7px;color:#456080;display:flex;justify-content:space-between}.code{width:100%;flex:1;min-height:470px;resize:vertical;border:0;outline:0;padding:18px;background:#0b1730;color:#d9e9ff;font:14px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;tab-size:2;white-space:pre;overflow:auto}.output{background:#fff;min-height:470px;flex:1;width:100%;border:0}.console{background:#07152e;color:#b8d7ff;padding:14px;min-height:110px;max-height:210px;overflow:auto;font:13px/1.55 ui-monospace,monospace;white-space:pre-wrap}.console .ok{color:#73e5b2}.console .err{color:#ff9999}.note{padding:13px 16px;background:#f0f7ff;border-top:1px solid var(--line);font-size:13px;color:#526985;line-height:1.6}.hidden{display:none!important}.split-label{font-size:12px;color:var(--muted);font-weight:700}.examples{display:flex;gap:7px;flex-wrap:wrap}.example{font-size:12px;padding:7px 10px;border:1px solid var(--line);background:#fff;border-radius:9px;cursor:pointer;color:#244875}.status{font-size:12px;color:#55708f}.iot-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}.iot-help{padding:18px;background:#f8fbff;border-left:1px solid var(--line)}.iot-help h3{margin:0 0 8px}.iot-help p,.iot-help li{font-size:13px;line-height:1.6;color:#536986}.led{width:15px;height:15px;border-radius:50%;display:inline-block;background:#8da0b9;box-shadow:0 0 0 5px #8da0b922;vertical-align:middle;margin-right:8px}.led.on{background:#21cf75;box-shadow:0 0 0 5px #21cf7528,0 0 15px #21cf75}.foot{text-align:center;color:#71819c;font-size:12px;padding:18px}
+@media(max-width:850px){.editors,.iot-grid{grid-template-columns:1fr}.pane+.pane,.iot-help{border-left:0;border-top:1px solid var(--line)}.code{min-height:330px}.output{min-height:340px}.editors{min-height:0}}
+</style></head>
+<body>
+<header class="top"><div class="brand">NEW HI TECH COMPUTER INSTITUTE<small>O Level • Advanced Practical Learning</small></div><a href="index.html#practical-lab">← वापस वेबसाइट पर जाएँ</a></header>
+<main class="wrap"><div class="heading"><div><div class="eyebrow">DIGITAL PRACTICE STUDIO</div><h1>O Level Practical Lab</h1><p>कोड लिखें · Run करें · Output देखें · अभ्यास करें</p></div><div class="status" id="runtimeStatus">Ready · आपका कोड इसी ब्राउज़र में चलता है</div></div>
+<div class="tabs" role="tablist"><button class="tab active" data-tab="web">🌐 Web Design</button><button class="tab" data-tab="python">🐍 Python</button><button class="tab" data-tab="iot">📡 IoT / Arduino</button></div>
+<section class="workspace" id="webPanel"><div class="bar"><strong>🌐 Web Design Playground</strong><div class="actions"><button class="btn" id="webReset">Reset Example</button><button class="btn primary" id="webRun">▶ Run Code</button></div></div><div class="editors"><div class="pane"><div class="pane-title">HTML + CSS + JAVASCRIPT <span class="split-label">एक ही फाइल में पूरा कोड</span></div><textarea class="code" id="webCode" spellcheck="false"><!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>My First Website</title>
+<style>
+body { font-family: Arial; background: #eef6ff; padding: 30px; text-align: center; }
+.card { background: white; max-width: 520px; margin: 30px auto; padding: 25px; border-radius: 18px; box-shadow: 0 8px 25px #174a8822; }
+h1 { color: #075bd5; }
+button { background: #0875e8; color: white; border: 0; padding: 12px 20px; border-radius: 9px; cursor: pointer; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>नमस्ते विद्यार्थी! 👋</h1>
+  <p>यह मेरी पहली वेबसाइट है।</p>
+  <button onclick="document.getElementById('msg').textContent='बहुत बढ़िया! आपका JavaScript चल रहा है।'">मुझे क्लिक करें</button>
+  <p id="msg"></p>
+</div>
+</body>
+</html></textarea></div><div class="pane"><div class="pane-title">LIVE WEBSITE OUTPUT <span class="split-label">Preview</span></div><iframe class="output" id="webOutput" title="Website output" sandbox="allow-scripts"></iframe></div></div><div class="note">HTML, CSS और JavaScript कोड लिखकर Run Code दबाएँ। Preview सुरक्षित iframe में खुलेगा। आपका कोड अपने आप ऑनलाइन सेव नहीं होता।</div></section>
+<section class="workspace hidden" id="pythonPanel"><div class="bar"><strong>🐍 Python Code Editor</strong><div class="actions"><button class="btn" id="pyReset">Reset Example</button><button class="btn primary" id="pyRun">▶ Run Python</button></div></div><div class="bar"><div class="examples"><button class="example" data-py="basic">Basic</button><button class="example" data-py="loop">Loop</button><button class="example" data-py="marks">Marksheet</button></div><span class="status" id="pyStatus">पहली बार Python runtime लोड होने में थोड़ा समय लग सकता है।</span></div><div class="editors"><div class="pane"><div class="pane-title">PYTHON 3 CODE</div><textarea class="code" id="pyCode" spellcheck="false">name = "Student"
+print("Namaste", name)
+
+num1 = 25
+num2 = 15
+print("Total =", num1 + num2)
+
+for i in range(1, 6):
+    print("Practice", i)</textarea></div><div class="pane"><div class="pane-title">PROGRAM OUTPUT</div><pre class="console" id="pyOutput">Run Python दबाएँ। Output यहाँ दिखाई देगा।</pre></div></div><div class="note">Python 3 को Pyodide के माध्यम से ब्राउज़र में चलाया जाता है। पहली बार चलाने पर इंटरनेट से Python runtime डाउनलोड होगा। सामान्य Python अभ्यास समर्थित है; कुछ सिस्टम-स्तरीय पैकेज उपलब्ध नहीं हो सकते।</div></section>
+<section class="workspace hidden" id="iotPanel"><div class="bar"><strong>📡 IoT / Arduino Practical Simulator</strong><div class="actions"><button class="btn" id="iotReset">Reset Example</button><button class="btn primary" id="iotRun">▶ Run Simulation</button></div></div><div class="iot-grid"><div class="pane"><div class="pane-title">ARDUINO-STYLE CODE <span class="split-label">C++ अभ्यास</span></div><textarea class="code" id="iotCode" spellcheck="false">// LED Blink - Arduino / ESP32 style example
+int ledPin = 13;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(9600);
+  Serial.println("IoT Lab Started");
+}
+
+void loop() {
+  digitalWrite(ledPin, HIGH);
+  Serial.println("LED ON");
+  delay(1000);
+  digitalWrite(ledPin, LOW);
+  Serial.println("LED OFF");
+  delay(1000);
+}</textarea></div><div class="iot-help"><h3>Virtual Circuit</h3><p><span class="led" id="ledIndicator"></span><b id="ledState">LED OFF</b></p><p>यहाँ Arduino-style कोड का बेसिक simulation दिखाया जाता है।</p><ul><li><code>pinMode()</code> — Pin का mode सेट करें</li><li><code>digitalWrite()</code> — LED ON/OFF</li><li><code>Serial.println()</code> — Serial Monitor संदेश</li><li><code>delay()</code> — समय का अंतर</li></ul><p><b>ध्यान दें:</b> यह सीखने के लिए simulator है, वास्तविक ESP32/Arduino बोर्ड पर कोड upload या hardware control नहीं करता।</p></div></div><div class="pane-title">SERIAL MONITOR / SIMULATION OUTPUT</div><pre class="console" id="iotOutput">Run Simulation दबाएँ।</pre><div class="note">IoT simulation में LED और Serial Monitor का demonstration मिलेगा। असली बोर्ड पर upload करने के लिए Arduino IDE और hardware की आवश्यकता होगी।</div></section>
+<div class="foot">© New Hi Tech Computer Institute, Near Medical College, KDC Road, Bahraich · Practical Learning Studio</div></main>
+<script>
+const $=id=>document.getElementById(id);const defaults={web:$('webCode').value,python:$('pyCode').value,iot:$('iotCode').value};
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));['web','python','iot'].forEach(k=>$(k+'Panel').classList.toggle('hidden',k!==b.dataset.tab));}));
+function runWeb(){const code=$('webCode').value;$('webOutput').srcdoc=code;} $('webRun').onclick=runWeb;$('webReset').onclick=()=>{$('webCode').value=defaults.web;runWeb()};runWeb();
+let pyodide=null;async function loadPython(){if(pyodide)return pyodide;$('pyStatus').textContent='Python runtime लोड हो रहा है…';if(!window.loadPyodide){await new Promise((resolve,reject)=>{let s=document.createElement('script');s.src='https://cdn.jsdelivr.net/pyodide/v0.27.7/full/pyodide.js';s.onload=resolve;s.onerror=()=>reject(Error('Python runtime डाउनलोड नहीं हुआ। इंटरनेट कनेक्शन जाँचें।'));document.head.appendChild(s)});}pyodide=await loadPyodide();return pyodide;}
+$('pyRun').onclick=async()=>{let btn=$('pyRun');btn.disabled=true;$('pyOutput').textContent='Python चल रहा है…';try{let p=await loadPython();let lines=[];p.setStdout({batched: s=>lines.push(s)});p.setStderr({batched:s=>lines.push('ERROR: '+s)});await p.runPythonAsync($('pyCode').value);$('pyOutput').textContent=lines.join('\n')||'Program पूरा हुआ। (कोई print output नहीं मिला)';$('pyStatus').textContent='Python 3 Ready';}catch(e){$('pyOutput').textContent=String(e);$('pyStatus').textContent='Run में समस्या';}finally{btn.disabled=false;}};
+$('pyReset').onclick=()=>{$('pyCode').value=defaults.python;$('pyOutput').textContent='Example reset हो गया।'};
+const pyExamples={basic:defaults.python,loop:'for number in range(1, 11):\n    print(number, "× 5 =", number * 5)',marks:'name = "Rahul"\nmarks = [78, 85, 69, 92, 88]\ntotal = sum(marks)\npercentage = total / len(marks)\nprint("Student:", name)\nprint("Total:", total)\nprint("Percentage:", percentage, "%")'};document.querySelectorAll('[data-py]').forEach(b=>b.onclick=()=>{$('pyCode').value=pyExamples[b.dataset.py]});
+$('iotRun').onclick=()=>{let code=$('iotCode').value;let out=['[Virtual Serial Monitor]'];let led=false;let hasOn=/digitalWrite\s*\([^,]+,\s*HIGH\s*\)/i.test(code),hasOff=/digitalWrite\s*\([^,]+,\s*LOW\s*\)/i.test(code);let msgs=[...code.matchAll(/Serial\.println?\s*\(\s*(["'])(.*?)\1\s*\)/g)].map(m=>m[2]);if(/Serial\.begin/.test(code))out.push('Serial connection started (9600 baud)');msgs.forEach(m=>out.push(m));if(hasOn&&hasOff){led=true;out.push('LED state: ON → OFF (blink pattern detected)');}else if(hasOn){led=true;out.push('LED state: ON');}else if(hasOff){out.push('LED state: OFF');}else out.push('कोई LED digitalWrite command नहीं मिला।');$('ledIndicator').classList.toggle('on',led);$('ledState').textContent=led?'LED activity detected':'LED OFF';$('iotOutput').textContent=out.join('\n')+'\n\nNote: यह basic code-pattern simulation है, C++ compiler नहीं।'};
+$('iotReset').onclick=()=>{$('iotCode').value=defaults.iot;$('iotOutput').textContent='Example reset हो गया।';$('ledIndicator').classList.remove('on');$('ledState').textContent='LED OFF'};
+</script></body></html>

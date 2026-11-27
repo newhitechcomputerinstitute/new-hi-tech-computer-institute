@@ -1,0 +1,28 @@
+NEW HI TECH COMPUTER INSTITUTE - GITHUB UPLOAD PACKAGE
+======================================================
+
+Package files:
+1. index.html
+   Premium blue homepage refresh, with the O Level Practical Lab highlighted after Courses.
+   Includes a responsive mobile menu and a prominent Open Full Screen Lab link.
+2. o-level-practical-lab-full.html
+   Full-screen practical environment:
+   - Web Design: HTML/CSS/JavaScript editor and live preview
+   - Python 3: in-browser execution using Pyodide (internet required to load runtime)
+   - IoT: Arduino/ESP32-style LED and Serial Monitor simulation
+   The IoT area is a learning simulator, not a real hardware compiler/uploader.
+
+UPLOAD STEPS:
+1. Download and extract this ZIP.
+2. Open your GitHub repository.
+3. Download/keep a backup of the current index.html before replacing it.
+4. Upload the new index.html into the repository's main/root folder and replace the old index.html.
+5. Upload o-level-practical-lab-full.html into that SAME root folder.
+6. Keep all your other existing files; do not delete them.
+7. Commit changes and wait for GitHub Pages to publish.
+
+IMPORTANT:
+- Both HTML files must be in the same root folder.
+- Keep the practical page filename exactly as written above.
+- The package does not change GitHub automatically.
+- Check existing internal links after publishing. Other site pages and assets are not deleted or replaced.
