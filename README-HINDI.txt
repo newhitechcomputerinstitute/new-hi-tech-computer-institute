@@ -11,7 +11,7 @@ NEW HI TECH COMPUTER INSTITUTE - WEBSITE PACKAGE
 - lab.html         : HTML/CSS live preview और Python practice box
 - student.html     : Student Corner / notice
 - gallery.html     : Photo Gallery
-- admin.html       : Notice, popup और gallery URL settings
+- admin.html       : Notice, popup और gallery URL settings\n- practical.html   : Course-wise Practical Assignment PDF upload/download
 - contact.html     : Institute contact और WhatsApp enquiry
 - style.css        : Gradient theme / responsive design
 - app.js           : Home page notice और popup
@@ -53,3 +53,12 @@ sample test banks रखे गए हैं। Test portal में Admin Pane
 पुराने portal के अनुसार मौजूद है; local browser storage की सीमा लागू है।
 
 किसी file को हटाने की जरूरत नहीं: सभी pages एक-दूसरे से linked हैं।
+
+PRACTICAL ASSIGNMENT / PDF DOWNLOAD:
+- Home page पर PDF Download और Practical Assignment के दो buttons हैं।
+- practical.html में MS Word, MS Excel, PowerPoint, MS Access, Tally, Photoshop,
+  CorelDRAW और Other categories हैं।
+- Admin PDF चुनकर upload/save कर सकता है; विद्यार्थी उसी browser/device में PDF download कर सकते हैं।
+- GitHub Pages static hosting में browser से upload की गई PDF सभी visitors को साझा नहीं होती।
+  सभी विद्यार्थियों को PDF उपलब्ध कराने के लिए PDF files को repository में रखकर public URL देना
+  या Firebase/backend storage configure करना आवश्यक है।

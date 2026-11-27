@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Practical Assignment & PDF Download | NEW HI TECH</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="pagehead"><div class="inner"><div><h1>📚 Practical Assignment & PDF Download</h1><p>कोर्स चुनें और अपने PDF प्रश्न डाउनलोड करें</p></div><nav class="navlinks"><a href="index.html">Home</a><a href="courses.html">Courses</a></nav></div></header>
+<main class="content">
+<section class="assignment-intro"><h2>Practical Assignment Portal</h2><p>MS Word, Excel, PowerPoint, Access, Tally, Photoshop, CorelDRAW और Other के PDF प्रश्न यहाँ मिलेंगे।</p></section>
+<div class="assignment-layout">
+<aside class="panel"><h2>सभी कोर्स</h2><div class="assignment-courses" id="courseButtons"></div></aside>
+<section class="panel assignment-content" id="pdf-library">
+<div class="assignment-toolbar"><h2 id="selectedCourse">MS Word</h2><span class="badge" id="pdfCount">0 PDF</span></div>
+<p class="muted">इस कोर्स के Practical Assignment और PDF प्रश्न नीचे दिखाई देंगे।</p>
+<div class="upload-box">
+<h3>➕ PDF प्रश्न जोड़ें (Admin)</h3>
+<label class="field">PDF का नाम<input id="pdfTitle" type="text" maxlength="100" placeholder="जैसे: MS Word Practical Assignment"></label>
+<label class="field">PDF फाइल चुनें<input id="pdfFile" type="file" accept="application/pdf,.pdf"></label>
+<button class="btn gradient" id="uploadPdf" type="button">PDF सेव करें</button>
+<p class="muted" id="uploadMessage" aria-live="polite">केवल PDF फाइल, अधिकतम 20 MB।</p>
+</div>
+<div class="pdf-list" id="pdfList"><div class="empty-pdfs">इस कोर्स में अभी कोई PDF नहीं जोड़ी गई है।</div></div>
+<div class="assignment-note"><b>जरूरी जानकारी:</b> अभी यह वेबसाइट GitHub की static website है। यहाँ अपलोड की गई PDF उसी ब्राउज़र/डिवाइस में सेव होगी। सभी विद्यार्थियों के मोबाइल पर PDF दिखाने के लिए PDF को GitHub repository में अपलोड करके उसका public link जोड़ना होगा, या Firebase/backend लगाना होगा।</div>
+</section>
+</div>
+</main>
+<footer><b>NEW HI TECH COMPUTER INSTITUTE</b><p>📍 Near Medical College, Infront of Krishi Vigyan Kendra, Bahraich</p><p>☎ 6394036352 &nbsp; | &nbsp; 7408479110</p></footer>
+<script>
+(()=>{
+const courses=['MS Word','MS Excel','PowerPoint','MS Access','Tally','Photoshop','CorelDRAW','Other'];
+const dbName='nht_practical_pdf_db', storeName='pdfs';
+let selected=courses[0], db;
+const $=id=>document.getElementById(id);
+function openDB(){
+ return new Promise((resolve,reject)=>{
+  const req=indexedDB.open(dbName,1);
+  req.onupgradeneeded=()=>{const d=req.result;if(!d.objectStoreNames.contains(storeName)){const st=d.createObjectStore(storeName,{keyPath:'id',autoIncrement:true});st.createIndex('course','course',{unique:false});}};
+  req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);
+ });
+}
+function allForCourse(course){
+ return new Promise((resolve,reject)=>{const tx=db.transaction(storeName,'readonly');const req=tx.objectStore(storeName).index('course').getAll(course);req.onsuccess=()=>resolve(req.result||[]);req.onerror=()=>reject(req.error);});
+}
+function addPdf(record){
+ return new Promise((resolve,reject)=>{const tx=db.transaction(storeName,'readwrite');tx.objectStore(storeName).add(record);tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);});
+}
+function removePdf(id){
+ return new Promise((resolve,reject)=>{const tx=db.transaction(storeName,'readwrite');tx.objectStore(storeName).delete(id);tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);});
+}
+function renderButtons(){
+ $('courseButtons').innerHTML='';
+ courses.forEach(course=>{const b=document.createElement('button');b.type='button';b.className='assignment-course'+(course===selected?' active':'');b.textContent=course;b.addEventListener('click',()=>{selected=course;renderButtons();renderPdfs();});$('courseButtons').appendChild(b);});
+}
+async function renderPdfs(){
+ $('selectedCourse').textContent=selected;
+ const list=$('pdfList');list.innerHTML='';
+ const records=await allForCourse(selected);
+ $('pdfCount').textContent=records.length+' PDF';
+ if(!records.length){list.innerHTML='<div class="empty-pdfs">इस कोर्स में अभी कोई PDF नहीं जोड़ी गई है।</div>';return;}
+ records.sort((a,b)=>b.created-a.created).forEach(rec=>{
+  const item=document.createElement('article');item.className='pdf-item';
+  const info=document.createElement('div');const title=document.createElement('strong');title.textContent=rec.title;const meta=document.createElement('small');meta.textContent=(rec.fileName||'PDF')+' • '+(rec.size/1024/1024).toFixed(2)+' MB';info.append(title,meta);
+  const actions=document.createElement('div');actions.className='pdf-actions';
+  const link=document.createElement('a');link.className='btn gradient';link.textContent='⬇ Download PDF';link.href=URL.createObjectURL(rec.file);link.download=rec.fileName||'assignment.pdf';
+  const del=document.createElement('button');del.className='btn dark';del.type='button';del.textContent='Delete';del.addEventListener('click',async()=>{if(confirm('क्या यह PDF हटानी है?')){await removePdf(rec.id);renderPdfs();}});
+  actions.append(link,del);item.append(info,actions);list.append(item);
+ });
+}
+$('uploadPdf').addEventListener('click',async()=>{
+ const file=$('pdfFile').files[0],title=$('pdfTitle').value.trim();
+ if(!file){$('uploadMessage').textContent='पहले PDF फाइल चुनें।';return;}
+ if(file.type!=='application/pdf'&&!file.name.toLowerCase().endsWith('.pdf')){$('uploadMessage').textContent='कृपया केवल PDF फाइल चुनें।';return;}
+ if(file.size>20*1024*1024){$('uploadMessage').textContent='PDF 20 MB से छोटी होनी चाहिए।';return;}
+ try{await addPdf({course:selected,title:title||file.name.replace(/\.pdf$/i,''),fileName:file.name,size:file.size,file,created:Date.now()});$('pdfTitle').value='';$('pdfFile').value='';$('uploadMessage').textContent='PDF इस डिवाइस के ब्राउज़र में सेव हो गई।';await renderPdfs();}
+ catch(e){$('uploadMessage').textContent='PDF सेव नहीं हो पाई। ब्राउज़र की storage space जाँचें।';}
+});
+(async()=>{try{db=await openDB();renderButtons();await renderPdfs();}catch(e){$('pdfList').innerHTML='<div class="empty-pdfs">इस ब्राउज़र में PDF storage उपलब्ध नहीं है। कृपया आधुनिक Chrome इस्तेमाल करें।</div>';}})();
+})();
+</script>
+</body></html>
